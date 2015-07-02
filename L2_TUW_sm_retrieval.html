@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ESA - SCIRoCCo - Educational Program - Vienna University of Technology</title>
+
+		<meta name="description" content="Educational material prepared in the context of the ESA funded project SCIRoCCo by Vienna University of Technology">
+		<meta name="author" content="christoph.reimer@geo.tuwien.ac.at">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css">
+		<!-- <link rel="stylesheet" href="./reveal.js/css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="./reveal.js/css/theme/scirocco.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="./reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				<br>
+				<h1>Soil Moisture</h1>
+					<h2>Lecture 2: TU Wien Soil Moisture Retrieval</h2>
+					<div class="div_center">
+					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
+					<br>
+					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
+					<br>
+					<small>Funded by:</small>
+					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
+					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+					</div>		
+				</section>
+				
+				<section>
+					<h1>Can soil moisture be observed directly?</h1>
+					<div class="fragment fade-in"><div class="div_right">...unfortunately not.</div></div>
+				</section>
+				
+				<section>
+					<h3>Introduction</h3>
+						<p>The <b>state of a geophysical parameter</b> can be retrieved by converting information that is contained...</p>
+						<li class="fragment fade-in"><font size="6">in the observed radiation emitted by an object on the Earth’s surface (passive case) or </font></li>
+						<li class="fragment fade-in"><font size="6">in observed reflected radiation (active case)</font></li>
+						<br>
+						<p class="fragment fade-in">&rArr; i.e., in the observed backscatter &sigma;<sup>0</sup></p>
+				</section>				
+				
+				<section>
+					<h3>Forward / Inverse Model</h3>
+					<img data-src="./lecture_material/TUW_sm_retrieval/forward_inverse_problem.jpg" style="width:500px;height:auto;" >
+					<font size="2"><br>Source: PPP 2 Soil Moisture Retrieval #13 </font>
+					<p>Geophysical Parameter: e.g. soil moisture
+					<br>Observable Quantity: radiance measured by the antenna
+					<br><br>The TU Wien method represents an inverse model.</p>
+                </section>
+				
+				<section>
+					<h3>Forward Model</h3>
+					<p>Processes involved in the <b>propagation of the radiation</b> from the Earth’s surface to the antenna:
+					<br><font size="6">interactions of the waves with illuminated matter such as <b>soil, vegetation canopy</b> or <b>atmospheric particles</b></font></p>
+					<div class="div_center"><b>Y</b>=<i>f</i>(<b>x</b>, &Omega;)</div>
+					
+					<p><i><font size="4">
+					<b>Y</b>...observable quantities (i.e., radiance measured by the antenna)<br>
+					<b>x</b>...geophysical parameters of interest (e.g., temperature or soil moisture)<br>
+					&Omega;...set of controllable measurement conditions (e.g., the wavelengths, viewing direction, time, sun position, polarization, ...)<br>
+					f(.)...complex function that relates <b>x</b> to <b>Y</b> (i.e., the formulation of the wave propagation and interaction processes)
+					</font></i>
+					</p>
+				</section>
+
+				<section>
+					<h3>Inverse Model</h3>
+					<p>Inversion of the forward model &rArr; retrieval of the parameters of interest from the observables</p>
+					<div class="div_center"><br> <b>x</b>=<i>g</i>(<b>Y</b>, &Omega;)
+					</div>
+					<p><i><font size="4">
+					<b>x</b>...estimates of the geophysical parameters obtained by g(.)<br>
+					g(.)...complex function<br>
+					<b>Y</b>...actual measurements<br>
+					&Omega;...approximations of the measurement conditions
+					</font></i>
+					</p>
+				</section>
+
+				<section>
+					<h1>How does this work in practice?</h1>
+				</section>
+				
+				<section>
+					<h3>The TU-Wien soil moisture model</h3>
+					<h4>Introduction I</h4>
+					<font size="6">
+					<li class="fragment fade-in">developed at the Vienna University of Technology</li>
+					<li class="fragment fade-in">physically motivated empirical change detection method</li>
+					<li class="fragment fade-in">no iterative adjustment process needed - direct retrieval from backscatter measurements possible</li>
+					<li class="fragment fade-in">model parameters calibration requires a multi-year radar backscatter archive &rArr; land cover, surface roughness...</li>
+					</font>
+				</section>
+				
+				<section>
+					<h3>The TU-Wien soil moisture model</h3>
+					<h4>Introduction II</h4>
+					<font size="6">
+					<ul>
+					<li class="fragment fade-in">European C-Band Scatterometers ESCAT and ASCAT data (multi-incidence angle and multi-beam viewing capability)</li>
+					<li class="fragment fade-in">Variations of the backscatter coefficient &sigma;<sup>0</sup> are related to...
+						<ul>
+						<li class="fragment fade-in" type="circle"><font size="6">surface roughness</font></li>
+						<li class="fragment fade-in" type="circle"><font size="6">changes in vegetation</font></li>
+						<li class="fragment fade-in" type="circle"><font size="6">variations in the soil water content</font></li>
+						</ul></li> 
+					</ul>
+					</font>
+				</section>
+				
+				<section>
+					<h3>TU-Wien soil moisture model</h3>
+					<h4>Physical assumptions and empirically observed evidences I</h4>
+					<font size="6">
+					<ul>
+					<li class="fragment fade-in">Incidence angle &theta;: strong impact on the backscatter coefficient &sigma;<sup>0</sup>
+						<ul>
+						<li class="fragment fade-in" align="center" type="circle"><font size="5">characteristic for roughness and vegetation</font>
+						<li class="fragment fade-in" type="circle"><font size="5">soil moisture changes are not/only minimally affected</font>
+						</ul>
+					<li class="fragment fade-in">coarse resolution of the scatterometer &rArr; roughness and land cover are temporally invariant
+					</ul>
+					</font>
+				</section>
+				
+				<section>
+					<h3>TU-Wien soil moisture model</h3>
+					<h4>Physical assumptions and empirically observed evidences II</h4>
+					<font size="6">
+					<li class="fragment fade-in">&sigma;<sup>0</sup> decreases/increases with vegetation change (more vegetation &rArr; higher &sigma;<sup>0</sup>)
+						<p class="fragment fade-in"><font size="5">&rArr; the &sigma;<sup>0</sup> time series changes in accordance to the vegetation phenology over time</font></p></li>
+					<li class="fragment fade-in">Vegetation phenology cycle: seasonal scale
+						<p class="fragment fade-in"><font size="5">&rArr; local short-term variability is negligible due to low resolution of the sensor</font></p></li>
+					<li class="fragment fade-in">The relationship between soil moisture and &sigma;<sup>0</sup> - expressed in [dB] - is linear</li></font>
+				</section>
+				
+				<section>
+					<h3>TU-Wien soil moisture model</h3>
+					<h4>Physical assumptions and empirically observed evidences III</h4>
+					<div class="div_left"<font size="5">
+					<ul>
+					<li>incidence angle at which &sigma;<sup>0</sup> is rather stable in face of vegetation changes: "crossover angles"
+						<ul>
+						<li type="circle"><font size="5">&theta;<sub>dry</sub>: 25°</font>
+						<li type="circle"><font size="5">&theta;<sub>wet</sub>: 40°</font>
+						</ul>
+					</ul>
+					</font></div>
+					<div class="div_right">
+						<img data-src="./lecture_material/TUW_sm_retrieval/crossover_angles.JPG" style="width:450px;height:auto;" >
+						<font size="2"><br>Source: SCIRoCCO Handbook</font>
+					</div>
+				</section>
+				
+				<section>
+					<h3>TU-Wien soil moisture model</h3>
+					<h4>processing steps</h4>
+					<div class="div_right">
+						<img data-src="./lecture_material/TUW_sm_retrieval/angles.JPG" style="width:auto;height:auto;" >
+						<font size="2"><br>Source: PPP 1 MRS #23</font>
+					</div>
+					<div class="div_left">
+					<ul>
+					<li class="fragment fade-in"> Normalisation of ESCAT backscatter measurements
+						<ul>
+						<li class="fragment fade-in" type="circle"><font size="6">Azimuth angle normalisation</font>
+						<li class="fragment fade-in" type="circle"><font size="6">Incidence angle normalisation</font>
+						</ul>
+					<li class="fragment fade-in">Vegetation correction
+					<li class="fragment fade-in">Soil moisture estimation
+					<li class="fragment fade-in">Soil moisture uncertainty estimation</div>
+					</ul>
+					<div class="div_center">
+					<p class="fragment fade-in" style="color:#006622;">...each of these steps is described in a respective lecture!</p>
+					</div>
+				</section>
+				
+		</div>
+
+		<script src="./reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+                
+                math: {
+                        mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                    },
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: './reveal.js/plugin/notes/notes.js', async: true },
+                    			{ src: './reveal.js/plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

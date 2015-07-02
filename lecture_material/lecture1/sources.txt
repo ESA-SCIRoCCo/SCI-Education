@@ -1,0 +1,28 @@
+lecture1:
+
+active_systems.png: PPP 1 MRS #35
+act_pass_missions.JPG: PPP 1 MRS #52
+band_designations_1MRS.JPG: PPP 1 Microwave Remote Sensing #18
+DistributionEarthWater.jpg: xxxx
+DSC04449.JPG: http://www.ars.usda.gov/images/docs/20261_20469/DSC04449.JPG
+evapotranspiration.svg.png: http://en.wikipedia.org/wiki/Evapotranspiration
+METOP_soil_moisture_artists_impression...: http://www.tuwien.ac.at/fileadmin/t/tuwien/fotos/pa/download/67_2008/METOP_soil_moisture_artists_impression_20.jpg
+passive_systems.png: PPP 1 MRS #35
+radiation.JPG: PPP 1 Microwave Remote Sensing #5
+scattering_mechanisms.JPG: handbook
+soil_wiki.jpg
+Soil-phase-diagram.svg
+The_water_cycle.jpg: xxxx (ESA?)
+Water_cycle_land_and_atmosphere.jpg: xxxx
+wet_soil_illustration.png
+
+TU Wien soil moisture retrieval:
+forward_inverse_problem.JPG: PPP 2 Soil Moisture Retrieval #13
+crossover_angles.JPG: SCIRoCCo Handbook p22
+angles.JPG: PPP 1 MRS #23
+
+azimuth normalization:
+ESCAT_ASCAT_geometry.JPG: PPP 1 MRS #64
+ESCAT_geometry.JPG: wie ESCAT_ASCAT_geometry
+local_inc_angle.JPG: SCIRoCCo Handbook p13
+slopes.JPG: SCIRoCCo Handbook p14

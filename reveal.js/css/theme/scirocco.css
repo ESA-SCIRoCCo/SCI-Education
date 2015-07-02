@@ -273,3 +273,15 @@ body {
     float: right;
     width:50%;
  }
+.reveal li { 
+	text-align: left; 
+}
+
+.reveal p {
+	text-align: justify;
+}
+
+.div_center {
+	text-align: center;
+	width:100%;
+}

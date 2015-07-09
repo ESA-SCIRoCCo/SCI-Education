@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ESA - SCIRoCCo - Educational Program - Vienna University of Technology</title>
+
+		<meta name="description" content="Educational material prepared in the context of the ESA funded project SCIRoCCo by Vienna University of Technology">
+		<meta name="author" content="christoph.reimer@geo.tuwien.ac.at">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css">
+		<!-- <link rel="stylesheet" href="./reveal.js/css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="./reveal.js/css/theme/scirocco.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="./reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				<br>
+				<h1>Soil Moisture</h1>
+					<h2>Lecture 8: Applications</h2>
+					<div class="div_center">
+					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
+					<br>
+					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
+					<br>
+					<small>Funded by:</small>
+					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
+					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+					</div>		
+				</section>
+				
+				<section>
+					<h3>Introduction</h3>
+					<p>There's a wide number of possible applications for surface soil moisture.
+					<br>You will be introduced to three of them:</p>
+					<ul><li>From surface soil moisture to root zone soil moisture
+					<li>Creation of a Climate Data Record (ESA CCI soil moisture)
+					<li>Rainfall estimation through surface soil moisture observations</ul>
+				</section>
+
+				<section>
+					<h1>From surface soil moisture to root zone soil moisture</h1>
+				</section>
+
+				<section>
+					<h3>Introduction</h3>
+					<ul><p><li>ESCAT soil moisture: water content of the first few centimetres of the soil profile
+						<ul><li type="circle">penetration depth of C-band microwaves: 0.5 - 2 cm</ul></p>
+					<p><li>Root zone soil moisture: the water content that is available for vegetation
+					<br>Required for...
+						<ul><li type="circle">numerical weather prediction
+						<li type="circle">hydrological studies
+						<li type="circle">vegetation studies</ul></p></ul>
+				</section>
+
+				<section>
+					<h3>Relationship surface sm/root zone sm</h3>
+					<ul><p><li>Relationship between surface and root zone soil moisture: infiltration</p>
+					<li><p>infiltration: dependent on a large number of parameters (soil texture and structure, vegetation coverage,
+					soil temperature, present water content...)</p>
+					<li><p>those parameters are not known on a global scale
+					<br>&rArr; empirical method for estimating root zone soil moisture from surface soil moisture measurements (Wagner et al. 1999)</p>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Two-layer water model</h3>
+					<ul><p><li>First layer:
+						<font size="6"><ul><li type="circle">C-band microwave accessible top-soil layer
+						<li type="circle">highly dynamic due to precipitation, evapotranspiration and runoff</ul></font>
+					<li>Second layer:
+						<font size="6"><ul><li type="circle">reservoir, coupled with the atmosphere via the first layer exclusively
+						<li type="circle">temporal variability decreases with increasing reservoir depth
+						<li type="circle">&rArr; the water content stored in the reservoir is a function of preceding precipitation events
+						</ul></p></font></ul>
+				</section>
+
+				<section>
+					<h3>Water balance equation and SWI</h3>
+					<p>Water balance equation for the reservoir:</p>
+					<img data-src="./lecture_material/L8_apps/eq_2-25.png" style="width:400px;height:auto;">, with T=L/C
+					<font size="4"><i><p>&Theta;...volumetric water content of the reservoir
+					<br>&Theta;<sub>S</sub>...water content of the surface layer
+					<br>t...time
+					<br>L...depth of the reservoir layer
+					<br>C...pseudo diffusivity coefficient incorporating all soil properties
+					<br>T...characteristic time length (increases with L and decreases with C)</p></i></font>
+					<p>Discrete formulation, defined as soil water index (SWI):</p>
+					<img data-src="./lecture_material/L8_apps/eq_2-26.png" style="width:400px;height:auto;" >
+				</section>
+
+				<section>
+					<h3>SSM vs. SWI</h3>
+					<img data-src="./lecture_material/L8_apps/ssm_swi.png" style="width:auto;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font>
+				</section>
+
+				<section>
+					<h1>Creation of a CLimate Data Record</h1>
+				</section>
+
+				<section>
+					<h3>ESA CCI soil moisture</h3>
+					<ul><li><p>In 2010, surface soil moisture was recognised as an Essential Climate Variable (ECV)</p>
+					<li><p>Important dataset for IPCC (Intergovernmental Panel on Climate Change) and UNFCCC (United Nations Framework
+					Convention on Climate Change)</p>
+					<li><p>ECV data records should be as long, complete and consistent as possible</p>
+					<li><p>make use of multiple data sources, including active and passive microwave observations (from ESCAT, ASCAT, SMMR, SSM/I, 
+					TMI, AMSR-E, Windsat, AMSR2)</p>
+				</section>
+
+				<section>
+					<h3>Production scheme I</h3>
+					<ol><li>Level 2 soil moisture retrieval separately for each satellite dataset
+					<li>Fusion of active Level 2 datasets
+					<li>Fusion of passive Level 2 datasets
+					<li>Merging of the active and passive datasets from steps 2 and 3</ol>
+
+					<p>It was found that the merging process improved the spatial and temporal coverage while minimally impacting the 
+					accuracy of the soil moisture retrievals (Liu et al., 2012).</p>
+				</section>
+
+				<section>
+					<h3>Production Scheme II</h3>
+					<p>Important steps in the fusion process:</p>
+					<ol><li>error characterisation
+					<li>matching to account for dataset specific biases
+					<li>merging</ol>
+					<p>This approach allows combining surface soil moisture data derived from different instruments with substantially different
+					instrument characteristics.
+					<br>It's straight forward to further enrich the ECV dataset with Level 2 data from other sensors (e.g. SMOS, SMAP...).</p>
+				</section>
+
+				<section>
+					<h1>Rainfall estimation</h1>
+				</section>
+
+				<section>
+					<h3>Rainfall and soil moisture</h3>
+					<ul><li>Soil moisture content and rainfall share a strong physical connection
+					<li>Rainfall is the main driver of temporal soil moisture variations
+					<li>Strong rainfall event:					
+						<ul><li type="circle">sudden increase in soil moisture
+						<li type="circle">followed by a smooth decline caused by evapotranspiration and drainage</ul>
+				</section>
+
+				<section>
+					<h3>Approaches to estimate and correct rainfall data</h3>
+					<ul><li>Correction/improvement of first guess rainfall estimates
+						<font size="6"><ul><li type="circle">Pellarin et al. (2008): improve rainfall estimates by using surface soil moisture 
+						observations
+						<li type="circle">Crow et al. (2009): correct land rainfall accumulation estimates using soil moisture retrievals</ul></font>
+					<li>Estimating rainfall
+						<font size="6"><ul><li type="circle">Brocca et al. (2013): inversion of the hydrological water balance regarding soil as a 
+						natural reservoir
+						<br> - a first analysis of this approach (SM2RAIN) shows promising results</ul></font></ul>
+				</section>
+
+				<section>
+					<h3>Rainfall estimation</h3>
+					<p>... from ASCAT surface soil moisture retrieval based on SM2RAIN</p>
+					<img data-src="./lecture_material/L8_apps/rainfall.png" style="width:auto;height:30%;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font>
+				</section>
+		</div>
+
+		<script src="./reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+                
+                math: {
+                        mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                    },
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: './reveal.js/plugin/notes/notes.js', async: true },
+                    			{ src: './reveal.js/plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ESA - SCIRoCCo - Educational Program - Vienna University of Technology</title>
+
+		<meta name="description" content="Educational material prepared in the context of the ESA funded project SCIRoCCo by Vienna University of Technology">
+		<meta name="author" content="christoph.reimer@geo.tuwien.ac.at">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css">
+		<!-- <link rel="stylesheet" href="./reveal.js/css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="./reveal.js/css/theme/scirocco.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="./reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				<br>
+				<h1>Soil Moisture</h1>
+					<h2>Lecture 4: Incidence Angle Normalisation</h2>
+					<div class="div_center">
+					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
+					<br>
+					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
+					<br>
+					<small>Funded by:</small>
+					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
+					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+					</div>		
+				</section>
+				
+				<section>
+					<h3>Backscatter from natural land surfaces</h3>
+					<ul><li>"Scattering": the random distortion of coherent electromagnetic (EM) waves by surface and structures similar to/larger in size 							than the radar wavelength
+					<br><br><li>any interface separating two media with different dielectric properties affects an incident EM wave
+					<br><br><li>perfectly flat interface &rArr; resulting field: two plane waves (refracted and reflected wave)</ul>
+				</section>
+
+				<section>
+					<h3>Fresnel's law</h3>
+					<div class="div_left">
+					<ul><li>upper medium: reflected wave, same angle &theta; as incident angle
+					<li>lower medium: refracted wave, angle &theta;'
+					<li>Fresnel's law:<br>
+					<img data-src="./lecture_material/inc_norm/fresnel.png" style="width:auto;height:auto;" >
+					<small><br>&epsilon;<sup>1, 2</sup>...dielectric constant of medium 1, 2</small></ul></div>
+					<div class="div_right">
+					<img data-src="./lecture_material/inc_norm/scattering_mechanisms_a.JPG" style="width:300px;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font></div>
+				</section>
+
+				<section>
+					<h3>Surface Scattering I</h3>
+					<ul><li>occurs if lower medium is uniform and homogenous
+					<br><br><li>scattering only occurs at the surface interface between the upper and the lower medium
+					<br><br><li>dependent on surface roughness and surface height autocorrelation function</ul>
+				</section>
+
+				<section>
+					<h3>Surface height autocorrelation function</h3>
+					<img data-src="./lecture_material/inc_norm/surface_AC.png" style="width:auto;height:auto;" >
+					<font size="2"><br>Source: PPP2 SM retrieval</font>
+				</section>
+
+				<section>
+					<h3>Surface Scattering II</h3>
+					<div class="div_left">
+					<font size="6"><ul><li><b>Specular reflection:</b> if the surface interface between two media is smooth compared to the wavelength of the 						incident wave, the interface acts like a mirror (see Fig. a)
+					<li><b>Diffuse reflection</b>: for rougher surface, less energy is reflected in specular direction, and more energy is scattered 						diffusely (Fig. b-d)
+					<br>Interesting for us: radiation in sensor direction (= backscatter)</ul></font></div>
+					<div class="div_right">
+					<img data-src="./lecture_material/lecture1/scattering_mechanisms.JPG" style="width:400px;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font>
+					<font size="6"><p style="color:#58ACFA;"><br>A larger incidence angle automatically means more specular reflection, and the other way 						round!</p></font>
+					</div>
+				</section>
+
+				<section>
+					<h3>Surface roughness</h3>
+					<div class="div_left"><p>Whether a surface appears to be smooth or rough depends on the wavelength of the incident wave.
+					<br><br>Rayleigh-criterion: a surface is classified as rough, if the root mean square height <i>h &gt; &lambda;/8&lowast;cos(&theta;)
+					</i>
+					<br><small>&lambda;...wavelength, &theta;...incidence angle</small></p></div>
+					<div class="div_right">
+					<img data-src="./lecture_material/inc_norm/incidence_roughness_backscatter.jpg" style="width:500px;height:auto;" >
+					<font size="2"><br>Source: PPP2 SM retrieval</font></div>
+				</section>
+
+				<section>
+					<h3>Volume Scattering I</h3>
+					<ul><li><p>In case of an inhomogenous medium, scattering can occur within the medium itself.</p>
+					<li><p>Dielectric discontinuities within the medium cause absorption and scattering in all directions &rArr; energy loss of the 						propagating wave</p>
+					<li><p>Size, shape and distribution of the individual dielectric discontinuities is more critical than the roughness of the surface 						boundary</p>
+				</section>
+
+				<section>
+					<h3>Volume Scattering II</h3>
+					<div class="div_right"><p>Such inhomogeneties can be leafs, twigs etc. of a vegetation canopy, snow flakes of a dry snow pack, or air 						bubbles in ice</p></div>
+					<div class="div_left">
+					<img data-src="./lecture_material/inc_norm/volume_scat.png" style="width:400px;height:auto;" >
+					<font size="2"><br>Source: Parameter Retrieval Script</font>
+				</section>
+
+				<section>
+					<h3>Relationship Incidence angle - backscatter coefficient I</h3>
+					<p>The backscatter coefficient &sigma;<sup>0</sup> is strongly related to the incidence angle &theta;:
+					<br>Increasing incidence angle &rArr; rapidly decreasing backscatter values
+					<br><br>Therefore, to compare measurements taken at different incidence angles, an <b>incidence angle normalization</b> 
+					needs to be applied first!
+				</section>
+
+				<section>
+					<h3>Relationship Incidence angle - backscatter coefficient II</h3>
+					<div class="div_left"><p><br>Main influence factors:</p>
+					<ul><li>surface roughness
+						<li>amount of biomass</ul>
+					<br><br><br><p>The figure shows the backscatter &sigma;<sup>0</sup> as a function of the incidence angle for three different 						biomes.</p></div>
+					<div class="div_right">					
+					<img data-src="./lecture_material/inc_norm/backscatter_incangle.png" style="width:600px;height:auto;" >
+					<font size="2"><br>Source: Scipal (2002)</font>
+					<p>The slope of the curves is indicative for the scattering mechanism taking place at the observed target.</p></div>
+				</section>
+
+				<section>
+					<h3>Backscatter incidence angle behaviour</h3>
+					<p>The backscatter incidence angle behaviour can be sufficiently modelled using a second order polynomial:</p>
+					<img data-src="./lecture_material/inc_norm/eq_2-5.png" style="width:900px;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font>
+					<p><i><font size="5"><ul><li type="circle">slope &sigma;'(40°, t) - first derivative of &sigma;<sup>0</sup>(&theta;)
+					<li type="circle">curvature &sigma;''(40°, t) - second derivative of &sigma;<sup>0</sup>(&theta;)
+					<li type="circle">both parameters are a function of time t and incidence angle 40°</ul></font></i></p>
+				</section>
+
+				<section>
+					<h3>Soil moisture change</h3>
+					<div class="div_left"><p>Assumption: slope &sigma;'(40°, t) and curvature &sigma;''(40°, t) are unaffected by soil 						moisture variations</p>
+					<p>&rArr; changes in soil moisture only reflect in the magnitude of the backscatter coefficient &sigma;<sup>0</sup>(40°, t)!
+					</p></div>
+					<div class="div_right">
+					<img data-src="./lecture_material/inc_norm/sm_change.png" style="width:400px;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font>
+					</div>
+				</section>
+
+				<section>
+					<h3>Changes of vegetation or surface roughness</h3>
+					<div class="div_left">
+					<p>Changes in the slope or curvature show variations in the vegetation phenology or changes in the surface roughness.</p></div>
+					<div class="div_right">
+					<img data-src="./lecture_material/inc_norm/veg_change.png" style="width:400px;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font>
+					</div>
+				</section>
+
+				<section>
+					<h3>slope and curvature  estimation I</h3>
+					<div class="div_left"><ul><li>ESCAT: 3 beams (fore-, mid-, aft-beam)
+					<li>estimation of the local slope &sigma;'<sub>L</sub>
+					<li>each backscatter triplet yields two local slope estimates:</ul>
+					<img data-src="./lecture_material/inc_norm/eq_2-6.png" style="width:600px;height:auto;" ></div>
+					<div class="div_right">
+					<img data-src="./lecture_material/inc_norm/local_slope.png" style="width:500px;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font></div>
+				</section>
+
+				<section>
+					<h3>slope and curvature  estimation II</h3>
+					<div class="div_left"><ul><li><p>regression line fitted to the computed local slopes &sigma;'<sub>L</sub> aquired during a 
+					particular period</p></ul>
+					<br><img data-src="./lecture_material/inc_norm/eq_2-7.png" style="width:600px;height:auto;" >
+					<br><ul><li>slope and curvature can be obtained</ul></div>
+					<div class="div_right">
+					<img data-src="./lecture_material/inc_norm/regr_line.png" style="width:500px;height:auto;" >
+					<font size="2"><br>Source: SCIRoCCo Handbook</font></div>
+				</section>
+
+				<section>
+					<h3>slope and curvature  estimation III</h3>
+					<div class="div_left"><font size="6"><p>&sigma;<sup>0</sup> depends on the incidence angle &theta;. This dependency is not constant 
+					over the year but changes with soil moisture and vegetation phenology.
+					<br><br>&rArr; 12 values for slope and curvature are computed for each month of the year
+					<br><br>Values for each day: interpolation of the monthly values</p></font></div>
+					<div class="div_right">
+					<br><br><br>					
+					<img data-src="./lecture_material/inc_norm/global_monthly_slope.gif" style="width:auto;height:auto;" >
+					<font size="2"><br>Source: PPP2 SM retrieval</font></div>
+				</section>
+
+				<section>
+					<h3>Incidence angle normalization</h3>
+					<p>The incidence angle normalisation can be performed using a full complement of 366 slope &sigma;'(40°, t) and curvature
+					&sigma;''(40°, t) values.
+					<br>Finally, the following equation is used to derive backscatter coefficients normalised to 40° incidence angle 
+					&sigma;<sup>0</sup>(40°, t):</p>
+					<img data-src="./lecture_material/inc_norm/eq_2-11.png" style="width:900px;height:auto;" >
+				</section>
+					
+		</div>
+
+		<script src="./reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+                
+                math: {
+                        mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                    },
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: './reveal.js/plugin/notes/notes.js', async: true },
+                    			{ src: './reveal.js/plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

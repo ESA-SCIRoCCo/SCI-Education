@@ -267,12 +267,23 @@ body {
  *********************************************/
  .div_left{
     float: left;
-    width:50%;
+    width:48%;
  }
  .div_right{
     float: right;
-    width:50%;
+    width:48%;
  }
+ 
+ .div_twothirds{
+	float: left;
+	width: 68%;
+}
+
+ .div_third{
+	float: right;
+	width: 28%;
+}
+	
 .reveal li { 
 	text-align: left; 
 }

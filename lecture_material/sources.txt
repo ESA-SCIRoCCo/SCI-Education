@@ -27,6 +27,7 @@ ESCAT_geometry.JPG: wie ESCAT_ASCAT_geometry
 local_inc_angle.JPG: SCIRoCCo Handbook p13
 slopes.JPG: SCIRoCCo Handbook p14
 fore_aft_diff.JPG: SCIRoCCo Handbook p15 [from Bartalis (2009)]
+topo_complexity: Source: PPP2 SM Retrieval
 
 incidence normalization:
 scattering_mechanisms_a/_bcd.JPG: handbook
@@ -35,6 +36,11 @@ backscatter_incangle.png: handbook (Scipal 2002)
 eq_2-5, eq_2-6, eq_2-7, eq_2-11: Handbook
 sm_change: Handbook
 veg_change: Handbook
+autocorrelation: PPP2 SM retrieval
+inc angle vs radr backscatter curve: PPP2 SM retrieval
+slope&curvature plots (#15, 16): handbook
+global monthly slope gif #18: PPP2 SM retrieval
+
 
 vegetation correction:
 backscatter_veg: Handbook [from Bartalis (2009)]
@@ -46,3 +52,12 @@ eq_2-16: Handbook
 flowchart: Handbook
 sm_retr_approach: Handbook
 pic1: Parameter Retrieval Skriptum
+
+<p>
+$$\phi = \frac{total\;volume\;of\;pores}{volume\;of\;soil}$$
+</p>
+Porosity $\phi$:</br>
+$\phi = \frac{V_{V}}{V_{T}}$</br>
+<small>($V_{V}$...pore space)</small>
+
+$\sigma^0$

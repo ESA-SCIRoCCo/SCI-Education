@@ -60,7 +60,7 @@
 					<p><div class="div_left">
 					<p><h5>ERS Scatterometers</h5>
 					<ul>
-						<li>&lambda;=5.7 cm / 5.3 GHz
+						<li>$\lambda$=5.7 cm / 5.3 GHz
 						<li>VV Polarization
 						<li>Resolution: (25) / 50 km
 						<li>Daily global coverage: 41%
@@ -74,7 +74,7 @@
 					<p><div class="div_right">
 					<p><h5>METOP ASCAT</h5>
 					<ul>
-						<li>&lambda;=5.7 cm / 5.3 GHz
+						<li>$\lambda$=5.7 cm / 5.3 GHz
 						<li>VV Polarization
 						<li>Resolution: 25 / 50 km
 						<li>Daily global coverage: 82%
@@ -90,7 +90,6 @@
 				<section>
 				<h3>Instrument Geometry</h3>
 					<img data-src="./lecture_material/azimuth_norm/ESCAT_ASCAT_geometry.JPG" style="width:auto;height:auto;" >
-					<font size="2"><br>Source: PPP 1 MRS #64</font>
 				</section>
 				
 				<section>
@@ -104,13 +103,12 @@
 				
 				<section>
 				<h3>Scatterometer viewing geometry</h3>
-				<p> Incidence angle &theta; vs. <b>local incidence angle &theta;<sub>L</sub></b>:</p>
+				<p> Incidence angle $\theta$ vs. <b>local incidence angle $\theta_{L}$</b>:</p>
 				<div class="div_left">
-				<img data-src="./lecture_material/azimuth_norm/local_inc_angle.JPG" style="width:auto;height:auto;" >
-				<font size="2"><br>Source: SCIRoCCo Handbook p13</font></div>
+				<img data-src="./lecture_material/azimuth_norm/local_inc_angle.JPG" style="width:auto;height:auto;" ></div>
 				<div class="div_right">
-				<p>Although the &sigma;<sup>0</sup> measurement is recorded at the nominal incidence angle &theta;, the angle determining the backscatter 
-				is actually the local incidence angle &theta;<sub>L</sub> because of the local slope of the surface.</p></div>
+				<p>Although the $\sigma^0$ measurement is recorded at the nominal incidence angle $\theta$, the angle determining the backscatter 
+				is actually the local incidence angle $\theta_{L}$ because of the local slope of the surface.</p></div>
 				</section>
 				
 				<section>
@@ -118,7 +116,6 @@
 					<ul><li>Global elevation data 30 arc-seconds GTOPO30 (USGS)
 					<li>Standard deviation of elevation normalized between 0 and 100</ul>
 					<img data-src="./lecture_material/azimuth_norm/topo_complexity.png" style="width:auto;height:auto;" >
-					<font size="2"><br>Source: PPP2 SM Retrieval</font>
 				</section>
 
 				<section>
@@ -127,14 +124,14 @@
 				<ul><li>size of the sloping targets &#8805; footprint size <font size="5">(Fig. a)</font>
 					<small><ul><li type="circle">e.g. mountain ranges, marginal areas of the Antarctic or Greenlandic ice sheets
 						<li type="circle">25/50 km spatial resolution: most places in the world have slope values very close to zero! (however, the standard deviation may be high)</ul></small>
-				<br><br><li>footprint &gt; size of sloping targets &gt; &lambda; <font size="5">(Fig. b, c)</font>
+				<br><br><li>footprint &gt; size of sloping targets &gt; $\lambda$ <font size="5">(Fig. b, c)</font>
 					<small><ul><li type="circle">backscatter is amplified if the satellite is facing the slopes
 						<li type="circle">e.g. aligned crop fields, sand dunes</ul></small>
 				</ul></div>
 				<div class="div_right">
 					<img data-src="./lecture_material/azimuth_norm/slopes_a.jpg" style="width:auto;height:220px;" >
 					<br><img data-src="./lecture_material/azimuth_norm/slopes_bc.jpg" style="width:auto;height:220px;" >
-					<font size="2"><br>Polar plots of backscatter coeff. &sigma;<sup>0</sup> versus azimuth angle &phi;; Source: SCIRoCCO Handbook</font>
+					<font size="2"><br>Polar plots of backscatter coeff. $\sigma^0$ versus azimuth angle $\phi$</font>
 				</div>	
 				</section>
 				
@@ -147,8 +144,7 @@
 					<li type="circle"><p>e.g. urban areas laid out along a rectangular grid</p></ul></font></div>
 				<div class="div_right">
 				<img data-src="./lecture_material/azimuth_norm/slopes_d.jpg" style="width:auto;height:300px;" >
-				<font size="2"><br>Polar plots of backscatter coeff. &sigma;<sup>0</sup> versus azimuth angle &phi;
-								<br>Source: SCIRoCCO Handbook</font></div>
+				<font size="2"><br>Polar plots of backscatter coeff. $\sigma^0$ versus azimuth angle $\phi$</font></div>
 				</section>
 				
 				<section>
@@ -161,13 +157,12 @@
 				<section>
 				<h3>Fore- and aft-beam backscatter I</h3>
 				<font size="6"><div class="div_right">
-				<li>&sigma;<sup>0</sup> is measured at almost the same time and at the same incidence angle, but at two different azimuth angles
-				<li>&sigma;<sup>0</sup><sub>fore</sub> - &sigma;<sup>0</sup><sub>aft</sub> = measure of the magnitude of possible azimuthal effects
+				<li>$\sigma^0$ is measured at almost the same time and at the same incidence angle, but at two different azimuth angles
+				<li>$\sigma^0_{fore}$ - $\sigma^0_{aft}$ = measure of the magnitude of possible azimuthal effects
 				<li>Very low values over tropical rainforests
 				<li>Extremely high values over sand desert areas (e.g. Sahara, Takalmakan-, Arabian Desert)
 				</div></font>
 				<div class="div_left"><img data-src="./lecture_material/azimuth_norm/ESCAT_geometry.jpg" style="width:300px;height:auto;" >
-					<font size="2"><br>Source: PPP 1 MRS #64</font></div>
 				</section>
 				
 				<section>
@@ -183,16 +178,18 @@
 				<li><p>method developed by Bartalis et al. (2006)</p>
 				<li><p>statistically expected backscatter value of a target is derived from historically recorded data</p>
 				<li><p>azimuthal anisotropy can vary depending on the incidence angle and with the season of the years</p>
-				<li><p>&rArr; number of possible azimuth-incidence combinations:</p>
-				<p style="color:#58ACFA;"><i>6 azimuth directions &lowast; 19 incidence angles = 114 possible combinations</i></p>
+				<li><p>number of possible azimuth-incidence combinations:
+				<br>6 possible azimuth directions
+				<br>19 possible incidence angles
+				<br><font style="color:#58ACFA;">&rArr; 114 possible combinations</font></p>
 				</section>
 				
 				<section>
 				<h3>Azimuthal Anisotropy II</h3>
 				<li><p>Enough data must be available</p>
-				<li><p>&delta; = expected backscatter - measured backscatter</p>
-				<li><p>backscatter measurements can be normalized by adding/subtracting the bias &delta;</p>
-				<li><p>Including seasonal changes: 114 &lowast; n azimuth-incidence-time combinations (<i>n...number of chosen periods</i>)</p>
+				<li><p>$\delta$ = expected backscatter - measured backscatter</p>
+				<li><p>backscatter measurements can be normalized by adding/subtracting the bias $\delta$</p>
+				<li><p>Including seasonal changes: $114\;*\;n$ azimuth-incidence-time combinations (<i>$n$...number of chosen periods</i>)</p>
 				</section>
 				
 				<section>

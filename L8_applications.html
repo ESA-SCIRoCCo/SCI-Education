@@ -104,7 +104,7 @@
 				<section>
 					<h3>Water balance equation and SWI</h3>
 					<p>Water balance equation for the reservoir:</p>
-					<img data-src="./lecture_material/L8_apps/eq_2-25.png" style="width:400px;height:auto;">, with T=L/C
+					$\Theta(t)\;=\;\frac{1}{T}\int_{-\infty}^t \! \Theta_S(\tau)\;*\;e^{(-\frac{t-\tau}{T})} \, \mathrm{d}\tau$, $with\;T=\frac{L}{C}$
 					<font size="4"><i><p>&Theta;...volumetric water content of the reservoir
 					<br>&Theta;<sub>S</sub>...water content of the surface layer
 					<br>t...time
@@ -112,13 +112,12 @@
 					<br>C...pseudo diffusivity coefficient incorporating all soil properties
 					<br>T...characteristic time length (increases with L and decreases with C)</p></i></font>
 					<p>Discrete formulation, defined as soil water index (SWI):</p>
-					<img data-src="./lecture_material/L8_apps/eq_2-26.png" style="width:400px;height:auto;" >
+					$SWI(t)\;=\;\frac{\sum_i{sm(t)\;*\;e^{(-\frac{t-t_i}{T})}}}{\sum_i{e^{(-\frac{t-t_i}{T})}}}$, $for\;t_i\;\le\;t$
 				</section>
 
 				<section>
 					<h3>SSM vs. SWI</h3>
 					<img data-src="./lecture_material/L8_apps/ssm_swi.png" style="width:auto;height:auto;" >
-					<font size="2"><br>Source: SCIRoCCo Handbook</font>
 				</section>
 
 				<section>
@@ -158,6 +157,18 @@
 				</section>
 
 				<section>
+				<h3>ESA CCI soil moisture example (2013/05/01)</h3>
+				<img data-src="./lecture_material/L8_apps/sm_ESACCI_20130501.png" style="width:70%;height:auto;" >
+				</section>
+
+				<section>
+				<h3>ESA CCI soil moisture example (2013/05/01)</h3>
+				<p><ul><li>flag values: 6, 12, 18
+				<li>flag meanings: ASCAT, AMSR2, AMSR2+ASCAT</ul></p>
+				<img data-src="./lecture_material/L8_apps/sensor_ESACCI_20130501.png" style="width:70%;height:auto;" >
+				</section>
+
+				<section>
 					<h1>Rainfall estimation</h1>
 				</section>
 
@@ -183,10 +194,9 @@
 				</section>
 
 				<section>
-					<h3>Rainfall estimation</h3>
-					<p>... from ASCAT surface soil moisture retrieval based on SM2RAIN</p>
-					<img data-src="./lecture_material/L8_apps/rainfall.png" style="width:auto;height:30%;" >
-					<font size="2"><br>Source: SCIRoCCo Handbook</font>
+					<h3>Rainfall estimation:</h3>
+					<p>... from ASCAT surface soil moisture retrieval based on SM2RAIN:</p>
+					<img data-src="./lecture_material/L8_apps/rainfall_estimate.png" style="width:45%;height:auto;" >
 				</section>
 		</div>
 

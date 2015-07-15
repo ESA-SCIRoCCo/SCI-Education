@@ -66,13 +66,12 @@
 						<li class="fragment fade-in"><font size="6">in the observed radiation emitted by an object on the Earth’s surface (passive case) or </font></li>
 						<li class="fragment fade-in"><font size="6">in observed reflected radiation (active case)</font></li>
 						<br>
-						<p class="fragment fade-in">&rArr; i.e., in the observed backscatter &sigma;<sup>0</sup></p>
+						<p class="fragment fade-in">&rArr; i.e., in the observed backscatter $\sigma^0$
 				</section>				
 				
 				<section>
 					<h3>Forward / Inverse Model</h3>
 					<img data-src="./lecture_material/TUW_sm_retrieval/forward_inverse_problem.JPG" style="width:500px;height:auto;" >
-					<font size="2"><br>Source: PPP 2 Soil Moisture Retrieval #13 </font>
 					<p>Geophysical Parameter: e.g. soil moisture
 					<br>Observable Quantity: radiance measured by the antenna
 					<br><br>The TU Wien method represents an inverse model.</p>
@@ -82,13 +81,14 @@
 					<h3>Forward Model</h3>
 					<p>Processes involved in the <b>propagation of the radiation</b> from the Earth’s surface to the antenna:
 					<br><font size="6">interactions of the waves with illuminated matter such as <b>soil, vegetation canopy</b> or <b>atmospheric particles</b></font></p>
-					<div class="div_center"><b>Y</b>=<i>f</i>(<b>x</b>, &Omega;)</div>
-					
+					<div class="div_center">
+					<p>$$Y = f(x, \Omega)$$</p>
+					</div>
 					<p><i><font size="4">
-					<b>Y</b>...observable quantities (i.e., radiance measured by the antenna)<br>
-					<b>x</b>...geophysical parameters of interest (e.g., temperature or soil moisture)<br>
-					&Omega;...set of controllable measurement conditions (e.g., the wavelengths, viewing direction, time, sun position, polarization, ...)<br>
-					f(.)...complex function that relates <b>x</b> to <b>Y</b> (i.e., the formulation of the wave propagation and interaction processes)
+					$Y$...observable quantities (i.e., radiance measured by the antenna)<br>
+					$x$...geophysical parameters of interest (e.g., temperature or soil moisture)<br>
+					$\Omega$...set of controllable measurement conditions (e.g., the wavelengths, viewing direction, time, sun position, polarization, ...)<br>
+					$f(.)$...complex function that relates <b>x</b> to <b>Y</b> (i.e., the formulation of the wave propagation and interaction processes)
 					</font></i>
 					</p>
 				</section>
@@ -96,13 +96,14 @@
 				<section>
 					<h3>Inverse Model</h3>
 					<p>Inversion of the forward model &rArr; retrieval of the parameters of interest from the observables</p>
-					<div class="div_center"><br> <b>x</b>=<i>g</i>(<b>Y</b>, &Omega;)
+					<div class="div_center">
+					<p>$$\hat{x} = g(\hat{Y}, \hat{\Omega})$$</p>
 					</div>
 					<p><i><font size="4">
-					<b>x</b>...estimates of the geophysical parameters obtained by g(.)<br>
-					g(.)...complex function<br>
-					<b>Y</b>...actual measurements<br>
-					&Omega;...approximations of the measurement conditions
+					$\hat{x}$ ...estimates of the geophysical parameters obtained by g(.)<br>
+					$g(.)$ ...complex function<br>
+					$\hat{Y}$ ...actual measurements<br>
+					$\hat{\Omega}$ ...approximations of the measurement conditions
 					</font></i>
 					</p>
 				</section>
@@ -128,7 +129,7 @@
 					<font size="6">
 					<ul>
 					<li class="fragment fade-in">European C-Band Scatterometers ESCAT and ASCAT data (multi-incidence angle and multi-beam viewing capability)</li>
-					<li class="fragment fade-in">Variations of the backscatter coefficient &sigma;<sup>0</sup> are related to...
+					<li class="fragment fade-in">Variations of the backscatter coefficient $\sigma^0$ are related to...
 						<ul>
 						<li class="fragment fade-in" type="circle"><font size="6">surface roughness</font></li>
 						<li class="fragment fade-in" type="circle"><font size="6">changes in vegetation</font></li>
@@ -143,7 +144,7 @@
 					<h4>Physical assumptions and empirically observed evidences I</h4>
 					<font size="6">
 					<ul>
-					<li class="fragment fade-in">Incidence angle &theta;: strong impact on the backscatter coefficient &sigma;<sup>0</sup>
+					<li class="fragment fade-in">Incidence angle $\theta$: strong impact on the backscatter coefficient $\sigma^0$
 						<ul>
 						<li class="fragment fade-in" align="center" type="circle"><font size="5">characteristic for roughness and vegetation</font>
 						<li class="fragment fade-in" type="circle"><font size="5">soil moisture changes are not/only minimally affected</font>
@@ -157,11 +158,11 @@
 					<h3>TU-Wien soil moisture model</h3>
 					<h4>Physical assumptions and empirically observed evidences II</h4>
 					<font size="6">
-					<li class="fragment fade-in">&sigma;<sup>0</sup> decreases/increases with vegetation change (more vegetation &rArr; higher &sigma;<sup>0</sup>)
-						<p class="fragment fade-in"><font size="5">&rArr; the &sigma;<sup>0</sup> time series changes in accordance to the vegetation phenology over time</font></p></li>
+					<li class="fragment fade-in">$\sigma^0$ decreases/increases with vegetation change (more vegetation &rArr; higher $\sigma^0$)
+						<p class="fragment fade-in"><font size="5">&rArr; the $\sigma^0$ time series changes in accordance to the vegetation phenology over time</font></p></li>
 					<li class="fragment fade-in">Vegetation phenology cycle: seasonal scale
 						<p class="fragment fade-in"><font size="5">&rArr; local short-term variability is negligible due to low resolution of the sensor</font></p></li>
-					<li class="fragment fade-in">The relationship between soil moisture and &sigma;<sup>0</sup> - expressed in [dB] - is linear</li></font>
+					<li class="fragment fade-in">The relationship between soil moisture and $\sigma^0$ - expressed in [dB] - is linear</li></font>
 				</section>
 				
 				<section>
@@ -169,16 +170,15 @@
 					<h4>Physical assumptions and empirically observed evidences III</h4>
 					<div class="div_left"<font size="5">
 					<ul>
-					<li>incidence angle at which &sigma;<sup>0</sup> is rather stable in face of vegetation changes: "crossover angles"
+					<li>incidence angle at which $\sigma^0$ is rather stable in face of vegetation changes: "crossover angles"
 						<ul>
-						<li type="circle"><font size="5">&theta;<sub>dry</sub>: 25°</font>
-						<li type="circle"><font size="5">&theta;<sub>wet</sub>: 40°</font>
+						<li type="circle"><font size="5">$\theta_{dry}$: 25°</font>
+						<li type="circle"><font size="5">$\theta_{wet}$: 40°</font>
 						</ul>
 					</ul>
 					</font></div>
 					<div class="div_right">
 						<img data-src="./lecture_material/TUW_sm_retrieval/crossover_angles.JPG" style="width:450px;height:auto;" >
-						<font size="2"><br>Source: SCIRoCCO Handbook</font>
 					</div>
 				</section>
 				
@@ -187,7 +187,6 @@
 					<h4>processing steps</h4>
 					<div class="div_right">
 						<img data-src="./lecture_material/TUW_sm_retrieval/angles.JPG" style="width:auto;height:auto;" >
-						<font size="2"><br>Source: PPP 1 MRS #23</font>
 					</div>
 					<div class="div_left">
 					<ul>

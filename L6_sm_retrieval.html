@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ESA - SCIRoCCo - Educational Program - Vienna University of Technology</title>
+
+		<meta name="description" content="Educational material prepared in the context of the ESA funded project SCIRoCCo by Vienna University of Technology">
+		<meta name="author" content="christoph.reimer@geo.tuwien.ac.at">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css">
+		<!-- <link rel="stylesheet" href="./reveal.js/css/theme/white.css" id="theme"> -->
+		<link rel="stylesheet" href="./reveal.js/css/theme/scirocco.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="./reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				<br>
+				<h1>Soil Moisture</h1>
+					<h2>Lecture 6: Soil Moisture Retrieval</h2>
+					<div class="div_center">
+					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
+					<br>
+					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
+					<br>
+					<small>Funded by:</small>
+					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
+					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+					</div>		
+				</section>
+				
+				<section>
+					<h3>Recapitulation</h3>
+					<p>So far, you have read about...</p>
+					<ul><li class="fragment fade-in">Backscatter normalisation, more precisely:
+						<ul><li class="fragment fade-in" type="circle">Azimuth angle normalisation
+						<li class="fragment fade-in" type="circle">Incidence angle normalisation</ul>
+					<li  class="fragment fade-in">Vegetation correction</ul>
+					<br><p class="fragment fade-in">Coming next...</p>
+					<ul><li class="fragment fade-in">the actual soil moisture retrieval algorithm</ul>
+					</section>
+
+				<section>
+					<h3>Important assumptions</h3>
+					<ul><li class="fragment fade-in"><p>the relationship between the observed backscatter coefficient in [dB] and the actual soil moisture
+					condition is linear</p>
+					<li class="fragment fade-in"><p>a long historic time series captures the driest (lowest backscatter, "air dryness") and wettest
+					(highest backscatter, "saturation") possible soil conditions</p>
+				</section>
+
+				<section>
+					<h3>the soil moisture retrieval approach</h3>
+					<p>The retrieved soil moisture values from the TU-Wien model are commonly expressed as <b>degree of saturation of the soil 
+					surface layer</b>.</p>
+					<img data-src="./lecture_material/L6_sm_retrieval/sm_retr_approach.png" style="width:80%;height:auto;" >
+				</section>
+
+				<section>
+					<h3>The crossover angle concept</h3>
+					<ul><li class="fragment fade-in"><p>Estimating the historically driest and wettest soil moisture condition by taking the 2.5% 
+					lower/upper backscatter values</p>
+					<li class="fragment fade-in"><p>the dry reference $\sigma^0_{dry}$ has to be shifted back (extrapolated) to the 
+					reference incidence angle of 40 degrees by means of the corresponding slope and curvature functions</p>
+					<li class="fragment fade-in"><p>this is not necessary for the wet reference, since it is assumed to be 40° (i.e. equal to the wet 
+					crossover angle)</p>
+				</section>
+
+				<section>
+					<h3>Soil Moisture Retrieval</h3>
+					<div class="div_left"><p>Comparison of the observed normalised backscatter measurements $\sigma(40°,t)$ to the dry 
+					($\sigma^0_{dry}$) and wet ($\sigma^0_{wet}$) reference:</p>
+					<br><font size="6">$sm(t)\;=\;\frac{\sigma^0(40,t)\;-\;\sigma^0_{dry}(40,t)}{\sigma^0_{dry}(40,t)\;-\;\sigma^0_{wet}(40,t)}$</font>
+					</div>
+					<div class="div_right">
+					<img data-src="./lecture_material/L6_sm_retrieval/pic1.png" style="width:400px;height:auto;" >
+					<p class="fragment fade-in" style="color:#58ACFA;">Now we've got a soil moisture value!</p></div>
+				</section>
+
+				<section>
+					<h3>The individual steps of the TU-Wien surface soil moisture retrieval model</h3>
+					<div class="div_twothirds">					
+					<img data-src="./lecture_material/L6_sm_retrieval/flowchart.png" style="width:600px;height:auto;" >
+					</div>
+					<div class="div_third">
+					<p><small><br><br><br><br><br><br><br><br><br><br><br><br>
+					<br>L1b...Level 1b
+					<br>DGG...discrete global grid</small></p>
+					</div>
+				</section>
+
+				<section>
+					<h3>SCAT seasonal soil moisture dynamics</h3>
+					<img data-src="./lecture_material/L6_sm_retrieval/mean_sm_change.gif" style="width:auto;height:auto;" >
+				</section>
+
+				<section>
+					<h3>Where does the retrieval go wrong?</h3>
+					<ul><li>Low signal-to-noise ratio (known from error propagation)
+					<font size="5"><ul><li>Vegetation
+					<li>Mountainous regions
+					<li>Urban areas</ul></font>
+					<li>Where does the model fail?
+					<font size="5"><ul><li>Frozen ground
+					<li>(Wet) Snow
+					<li>Water surfaces
+					<li>Dry soil scattering</ul></font>
+					<li>Known calibration issues
+					<font size="5"><ul><li>Wet correction in arid environments
+					<li>Differences in sensor calibration
+					<li>Long-term changes in land cover</ul></font></ul>
+				</section>
+
+				<section>
+					<h3>Low Signal-to-Noise Ratio</h3>
+					<img data-src="./lecture_material/L6_sm_retrieval/SNR.png" style="width:auto;height:auto;" >
+				</section>
+
+				<section>
+					<h3>Resume of the Retrieval I</h3>
+					<font size="6"><ul><li><p>Soil moisture retrieval methode is a data-based approach</p>
+						<ul><p><li>Starts from the observations, not from theoretical model considerations
+							<ul><li>Nevertheless, the TU Wien method has a solid physical foundation</ul></p>
+						<p><li>Exploits multiple viewing capabilities
+							<ul><li>Important for modelling the effect of seasonal vegetation growth and decay (phenology)</ul></p>
+						<p><li>Exploits the availability of long-term data series
+							</p>
+						</ul></ul></font>
+				</section>
+
+				<section>
+					<h3>Resume of the Retrieval II</h3>					
+					<ul><li><p>No external/auxiliary datasets are used for the retrieval</p>
+						<ul><li><p>No soil texture, soil type, land cover, biomass, evapotranspiration, brightness temperature…</p>
+						<li><p>But raw backscattering signatures in different incidence (viewing) angles</p></ul></ul>
+				</section>
+					
+		</div>
+
+		<script src="./reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+                
+                math: {
+                        mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                    },
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: './reveal.js/plugin/notes/notes.js', async: true },
+                    			{ src: './reveal.js/plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

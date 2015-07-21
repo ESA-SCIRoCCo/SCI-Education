@@ -91,10 +91,10 @@ body {
   list-style-type: disc; }
 
 .reveal ul ul {
-  list-style-type: square; }
+  list-style-type: circle; }
 
 .reveal ul ul ul {
-  list-style-type: circle; }
+  list-style-type: square; }
 
 .reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
   display: block;
@@ -264,7 +264,23 @@ body {
 
  /*********************************************
  * CUSTOMISATION
- *********************************************/
+div.div_left{
+	position:absolute;
+	top: 100px;
+	left: 30px;
+	width: 430px;
+	margin: 0px 0px 0px 0px;
+}
+ 
+div.div_right{
+	position:absolute;
+	top: 100px;
+	right: 30px;
+	width: 430px;
+	margin: 0px 0px 0px 0px;
+}
+*********************************************/
+
  .div_left{
     float: left;
     width:48%;
@@ -274,12 +290,12 @@ body {
     width:48%;
  }
  
- .div_twothirds{
+ div.div_twothirds{
 	float: left;
 	width: 68%;
 }
 
- .div_third{
+ div.div_third{
 	float: right;
 	width: 28%;
 }
@@ -292,7 +308,7 @@ body {
 	text-align: justify;
 }
 
-.div_center {
+div.div_center {
 	text-align: center;
 	width:100%;
 }

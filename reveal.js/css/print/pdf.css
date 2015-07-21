@@ -134,6 +134,13 @@ ul, ol, div, p {
 }
 .reveal img {
 	box-shadow: none;
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
 }
 .reveal .roll {
 	overflow: visible;
@@ -154,4 +161,3 @@ ul, ol, div, p {
 	position: relative;
 	z-index: 1;
 }
-

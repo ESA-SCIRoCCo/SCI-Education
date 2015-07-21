@@ -45,13 +45,13 @@
 				<h1>Soil Moisture</h1>
 					<h2>Lecture 4: Incidence Angle Normalisation</h2>
 					<div class="div_center">
-					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
-					<br>
-					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
-					<br>
-					<small>Funded by:</small>
-					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
-					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+						<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
+						<br>
+						<img src="./lecture_material/logos/GEO.png" style="width:25%;height:auto" >
+						<br>
+						<small>Funded by:</small>
+						<img src="./lecture_material/logos/ESA.png" style="width:25%;height:auto;float:left;" >
+						<img src="./lecture_material/logos/SCIRoCCo.png" style="width:25%;height:auto;float:right;" >
 					</div>		
 				</section>
 				
@@ -71,7 +71,8 @@
 					$\theta'\;=\;\arcsin{\frac{\sqrt{\varepsilon_2}\sin{\theta}}{\sqrt{\varepsilon_1}}}$
 					<small><br>$\varepsilon_{1,\;2}$...dielectric constant of medium 1, 2</small></ul></div>
 					<div class="div_right">
-					<img data-src="./lecture_material/inc_norm/scattering_mechanisms_a.JPG" style="width:300px;height:auto;" >
+						<img src="./lecture_material/inc_norm/scattering_mechanisms_a.JPG" style="width:auto;height:auto;" >
+					</div>
 				</section>
 
 				<section>
@@ -79,10 +80,19 @@
 					<ul><li><p>occurs if lower medium is uniform and homogenous</p>
 					<li><p>scattering only occurs at the surface interface between the upper and the lower medium</p>
 					<li><p>dependent on two roughness parameters:
-					<ul><li type="circle">standard deviation of the surface height variations $s$
-					<li type="circle">surface correlation length $l$</p></ul>
+					<ul><li>standard deviation of the surface height variations $s$
+					<li>surface correlation length $l$</p></ul>
 					<li><p>Fraunhofer criterion: smooth if $s\;\lt\;\frac{\lambda}{128\cos(\theta_0)}$</p></ul>
-					
+				</section>
+				
+				<section>
+					<h3>Surface roughness</h3>
+					<div class="div_left"><p>Whether a surface appears to be smooth or rough depends on the wavelength of the incident wave.
+					<br><br>Rayleigh-criterion: a surface is classified as rough, if the root mean square height <br>$h$ &gt; $\frac{\lambda}{8}*\cos{\theta}$
+					<br><small>$\lambda$...wavelength, $\theta$...incidence angle</small></p></div>
+					<div class="div_right">
+						<img src="./lecture_material/inc_norm/incidence_roughness_backscatter.jpg" style="width:auto;height:auto;" >
+					</div>
 				</section>
 
 				<section>
@@ -97,42 +107,42 @@
 
 				<section>
 					<h3>Surface profile and corresponding ACF</h3>
-					<img data-src="./lecture_material/inc_norm/surface_AC.png" style="width:auto;height:auto;" >
+					<div class="div_center">
+					<img src="./lecture_material/inc_norm/surface_AC.png" style="width:60%;height:auto;" >
+					</div>
 				</section>
 
 				<section>
 					<h3>Surface Scattering II</h3>
 					<div class="div_left">
-					<font size="6"><ul><li><b>Specular reflection:</b> if the surface interface between two media is smooth compared to the wavelength of the 						incident wave, the interface acts like a mirror (see Fig. a)
-					<li><b>Diffuse reflection</b>: for rougher surface, less energy is reflected in specular direction, and more energy is scattered 						diffusely (Fig. b-d)
-					<br>Interesting for us: radiation in sensor direction (= backscatter)</ul></font></div>
+						<font size="6">
+							<ul>
+								<li><p><b>Specular reflection:</b> if the surface interface between two media is smooth compared to the wavelength of the incident wave, the interface acts like a mirror (see Fig. a)</p>
+								<li><p><b>Diffuse reflection</b>: for rougher surface, less energy is reflected in specular direction, and more energy is scattered diffusely (Fig. b-d)</p>
+							</ul>
+						</font>
+					</div>
 					<div class="div_right">
-					<img data-src="./lecture_material/lecture1/scattering_mechanisms.JPG" style="width:400px;height:auto;" >
-					<font size="6"><p style="color:#58ACFA;"><br>A larger incidence angle automatically means more specular reflection, and the other way 						round!</p></font>
+						<img src="./lecture_material/lecture1/scattering_mechanisms.JPG" style="width:auto;height:auto;" >
+						<font size="6">
+							<p>Interesting for us: radiation in sensor direction (= backscatter)</p>
+							<p style="color:#0098DB;">A larger incidence angle automatically means more specular reflection, and the other way round!</p>
+						</font>
 					</div>
 				</section>
 
 				<section>
-					<h3>Surface roughness</h3>
-					<div class="div_left"><p>Whether a surface appears to be smooth or rough depends on the wavelength of the incident wave.
-					<br><br>Rayleigh-criterion: a surface is classified as rough, if the root mean square height <br>$h$ &gt; $\frac{\lambda}{8}*\cos{\theta}$
-					<br><small>$\lambda$...wavelength, $\theta$...incidence angle</small></p></div>
-					<div class="div_right">
-					<img data-src="./lecture_material/inc_norm/incidence_roughness_backscatter.jpg" style="width:500px;height:auto;" >
-				</section>
-
-				<section>
 					<h3>Volume Scattering I</h3>
-					<ul><li><p>In case of an inhomogenous medium, scattering can occur within the medium itself.</p>
-					<li><p>Dielectric discontinuities within the medium cause absorption and scattering in all directions &rArr; energy loss of the 						propagating wave</p>
-					<li><p>Size, shape and distribution of the individual dielectric discontinuities is more critical than the roughness of the surface 						boundary</p>
+					<ul><li><p>In case of an inhomogeneous medium, scattering can occur within the medium itself.</p>
+					<li><p>Dielectric discontinuities within the medium cause absorption and scattering in all directions &rArr; energy loss of the propagating wave</p>
+					<li><p>Size, shape and distribution of the individual dielectric discontinuities is more critical than the roughness of the surface boundary</p>
 				</section>
 
 				<section>
 					<h3>Volume Scattering II</h3>
-					<div class="div_right"><p>Such inhomogeneties can be leafs, twigs etc. of a vegetation canopy, snow flakes of a dry snow pack, or air 						bubbles in ice</p></div>
+					<div class="div_right"><p>Such inhomogeneities can be leafs, twigs etc. of a vegetation canopy, snow flakes of a dry snow pack, or air bubbles in ice</p></div>
 					<div class="div_left">
-					<img data-src="./lecture_material/inc_norm/volume_scat.png" style="width:400px;height:auto;" >
+					<img src="./lecture_material/inc_norm/volume_scat.png" style="width:auto;height:auto;" >
 				</section>
 
 				<section>
@@ -150,7 +160,7 @@
 						<li>amount of biomass</ul>
 					<br><br><br><p>The figure shows the backscatter $\sigma^0$ as a function of the incidence angle for three different biomes.</p></div>
 					<div class="div_right">					
-					<img data-src="./lecture_material/inc_norm/backscatter_incangle.png" style="width:600px;height:auto;" >
+					<img src="./lecture_material/inc_norm/backscatter_incangle.png" style="width:auto;height:auto;" >
 					<font size="2"><br>[from Scipal (2002)]</font>
 					<p>The slope of the curves is indicative for the scattering mechanism taking place at the observed target.</p></div>
 				</section>
@@ -170,7 +180,7 @@
 					<p>&rArr; changes in soil moisture are only reflected in the magnitude of the backscatter coefficient $\sigma^0(40°,\;t)$!
 					</p></div>
 					<div class="div_right">
-					<img data-src="./lecture_material/inc_norm/sm_change.png" style="width:400px;height:auto;" >
+					<img src="./lecture_material/inc_norm/sm_change.png" style="width:auto;height:auto;" >
 					</div>
 				</section>
 
@@ -179,7 +189,7 @@
 					<div class="div_left">
 					<p>Changes in the slope or curvature show variations in the vegetation phenology or changes in the surface roughness.</p></div>
 					<div class="div_right">
-					<img data-src="./lecture_material/inc_norm/veg_change.png" style="width:400px;height:auto;" >
+					<img src="./lecture_material/inc_norm/veg_change.png" style="width:auto;height:auto;" >
 					</div>
 				</section>
 
@@ -191,7 +201,7 @@
 					<font size="6">$\sigma'_L(\frac{\theta_m\;+\;\theta_{f,a}}{2})\;=\;\frac{\sigma^0_m(\theta_m)\;-\;\sigma^0_{f,a}(\theta_{f,a})}{\theta_m\;-\;\theta_{f,a}}$
 					</font></div>
 					<div class="div_right">
-					<img data-src="./lecture_material/inc_norm/local_slope.png" style="width:500px;height:auto;" >
+					<img src="./lecture_material/inc_norm/local_slope.png" style="width:auto;height:auto;" >
 				</section>
 
 				<section>
@@ -203,7 +213,7 @@
 					<li><p>slope and curvature can be obtained from the regression line</p></ul>
 					</div>
 					<div class="div_right">
-					<img data-src="./lecture_material/inc_norm/regr_line.png" style="width:500px;height:auto;" >
+					<img src="./lecture_material/inc_norm/regr_line.png" style="width:auto;height:auto;" >
 				</section>
 
 				<section>
@@ -216,7 +226,9 @@
 			
 				<section>
 					<h3>Global monthly slope</h3>
-					<img data-src="./lecture_material/inc_norm/global_monthly_slope.gif" style="width:auto;height:auto;" >
+					<div class="div_center">
+					<img src="./lecture_material/inc_norm/global_monthly_slope.gif" style="width:auto;height:auto;" >
+					</div>
 				</section>
 
 				<section>

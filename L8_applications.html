@@ -47,11 +47,11 @@
 					<div class="div_center">
 					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
 					<br>
-					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
+					<img src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
 					<br>
 					<small>Funded by:</small>
-					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
-					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+					<img src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
+					<img src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
 					</div>		
 				</section>
 				
@@ -65,23 +65,23 @@
 				</section>
 
 				<section>
-					<h1>From surface soil moisture to root zone soil moisture</h1>
+					<h1>From surface SM to <br>root zone SM</h1>
 				</section>
 
 				<section>
 					<h3>Introduction</h3>
 					<ul><p><li>ESCAT soil moisture: water content of the first few centimetres of the soil profile
-						<ul><li type="circle">penetration depth of C-band microwaves: 0.5 - 2 cm</ul></p>
+						<ul><li>penetration depth of C-band microwaves: 0.5 - 2 cm</ul></p>
 					<p><li>Root zone soil moisture: the water content that is available for vegetation
 					<br>Required for...
-						<ul><li type="circle">numerical weather prediction
-						<li type="circle">hydrological studies
-						<li type="circle">vegetation studies</ul></p></ul>
+						<ul><li>numerical weather prediction
+						<li>hydrological studies
+						<li>vegetation studies</ul></p></ul>
 				</section>
 
 				<section>
 					<h3>Relationship surface sm/root zone sm</h3>
-					<ul><p><li>Relationship between surface and root zone soil moisture: infiltration</p>
+					<ul><p><li>Relationship between surface and root zone soil moisture: <b>infiltration</b></p>
 					<li><p>infiltration: dependent on a large number of parameters (soil texture and structure, vegetation coverage,
 					soil temperature, present water content...)</p>
 					<li><p>those parameters are not known on a global scale
@@ -92,12 +92,12 @@
 				<section>
 					<h3>Two-layer water model</h3>
 					<ul><p><li>First layer:
-						<font size="6"><ul><li type="circle">C-band microwave accessible top-soil layer
-						<li type="circle">highly dynamic due to precipitation, evapotranspiration and runoff</ul></font>
+						<font size="6"><ul><li>C-band microwave accessible top-soil layer
+						<li>highly dynamic due to precipitation, evapotranspiration and runoff</ul></font>
 					<li>Second layer:
-						<font size="6"><ul><li type="circle">reservoir, coupled with the atmosphere via the first layer exclusively
-						<li type="circle">temporal variability decreases with increasing reservoir depth
-						<li type="circle">&rArr; the water content stored in the reservoir is a function of preceding precipitation events
+						<font size="6"><ul><li>reservoir, coupled with the atmosphere via the first layer exclusively
+						<li>temporal variability decreases with increasing reservoir depth
+						<li>&rArr; the water content stored in the reservoir is a function of preceding precipitation events
 						</ul></p></font></ul>
 				</section>
 
@@ -117,7 +117,7 @@
 
 				<section>
 					<h3>SSM vs. SWI</h3>
-					<img data-src="./lecture_material/L8_apps/ssm_swi.png" style="width:auto;height:auto;" >
+					<img src="./lecture_material/L8_apps/ssm_swi.png" style="width:auto;height:auto;" >
 				</section>
 
 				<section>
@@ -126,12 +126,14 @@
 
 				<section>
 					<h3>ESA CCI soil moisture</h3>
-					<ul><li><p>In 2010, surface soil moisture was recognised as an Essential Climate Variable (ECV)</p>
-					<li><p>Important dataset for IPCC (Intergovernmental Panel on Climate Change) and UNFCCC (United Nations Framework
-					Convention on Climate Change)</p>
-					<li><p>ECV data records should be as long, complete and consistent as possible</p>
-					<li><p>make use of multiple data sources, including active and passive microwave observations (from ESCAT, ASCAT, SMMR, SSM/I, 
-					TMI, AMSR-E, Windsat, AMSR2)</p>
+					<font size="6"><ul>
+						<li><p>In 2010, surface soil moisture was recognised as an Essential Climate Variable (ECV)</p>
+						<li><p>Important dataset for IPCC (Intergovernmental Panel on Climate Change) and UNFCCC (United Nations Framework
+						Convention on Climate Change)</p>
+						<li><p>ECV data records should be as long, complete and consistent as possible</p>
+						<li><p>make use of multiple data sources, including active and passive microwave observations (from ESCAT, ASCAT, SMMR, SSM/I, 
+						TMI, AMSR-E, Windsat, AMSR2)</p>
+					</ul></font>
 				</section>
 
 				<section>
@@ -147,25 +149,31 @@
 
 				<section>
 					<h3>Production Scheme II</h3>
+					<font size="6">
 					<p>Important steps in the fusion process:</p>
-					<ol><li>error characterisation
-					<li>matching to account for dataset specific biases
-					<li>merging</ol>
+					<ol>
+						<li>error characterisation
+						<li>matching to account for dataset specific biases
+						<li>merging
+					</ol>
 					<p>This approach allows combining surface soil moisture data derived from different instruments with substantially different
 					instrument characteristics.
-					<br>It's straight forward to further enrich the ECV dataset with Level 2 data from other sensors (e.g. SMOS, SMAP...).</p>
+					<br>Moreover, it's straight forward to further enrich the ECV dataset with Level 2 data from other sensors (e.g. SMOS, SMAP...).</p>
+					</font>
 				</section>
 
 				<section>
 				<h3>ESA CCI soil moisture example (2013/05/01)</h3>
-				<img data-src="./lecture_material/L8_apps/sm_ESACCI_20130501.png" style="width:70%;height:auto;" >
+				<img src="./lecture_material/L8_apps/sm_ESACCI_20130501.png" style="width:70%;height:auto;" >
 				</section>
 
 				<section>
 				<h3>ESA CCI soil moisture example (2013/05/01)</h3>
-				<p><ul><li>flag values: 6, 12, 18
-				<li>flag meanings: ASCAT, AMSR2, AMSR2+ASCAT</ul></p>
-				<img data-src="./lecture_material/L8_apps/sensor_ESACCI_20130501.png" style="width:70%;height:auto;" >
+				<font size="5"><ul>
+					<li>flag values: 6 (blue), 12 (yellow), 18 (red)
+					<li>flag meanings: ASCAT, AMSR2, AMSR2+ASCAT
+				</ul></font>
+				<img src="./lecture_material/L8_apps/sensor_ESACCI_20130501.png" style="width:70%;height:auto;" >
 				</section>
 
 				<section>
@@ -177,26 +185,32 @@
 					<ul><li>Soil moisture content and rainfall share a strong physical connection
 					<li>Rainfall is the main driver of temporal soil moisture variations
 					<li>Strong rainfall event:					
-						<ul><li type="circle">sudden increase in soil moisture
-						<li type="circle">followed by a smooth decline caused by evapotranspiration and drainage</ul>
+						<ul><li>sudden increase in soil moisture
+						<li>followed by a smooth decline caused by evapotrans-<br>piration and drainage</ul>
 				</section>
 
 				<section>
 					<h3>Approaches to estimate and correct rainfall data</h3>
-					<ul><li>Correction/improvement of first guess rainfall estimates
-						<font size="6"><ul><li type="circle">Pellarin et al. (2008): improve rainfall estimates by using surface soil moisture 
-						observations
-						<li type="circle">Crow et al. (2009): correct land rainfall accumulation estimates using soil moisture retrievals</ul></font>
-					<li>Estimating rainfall
-						<font size="6"><ul><li type="circle">Brocca et al. (2013): inversion of the hydrological water balance regarding soil as a 
-						natural reservoir
-						<br> - a first analysis of this approach (SM2RAIN) shows promising results</ul></font></ul>
+					<font size="6"><ul>
+						<li><p>Correction/improvement of first guess rainfall estimates
+						<font size="5"><ul>
+							<li>Pellarin et al. (2008): improve rainfall estimates by using surface soil moisture 
+							observations
+							<li>Crow et al. (2009): correct land rainfall accumulation estimates using soil moisture retrievals
+						</ul></font></p>
+						<li><p>Estimating rainfall
+						<font size="5"><ul>
+							<li>Brocca et al. (2013): inversion of the hydrological water balance regarding soil as a 
+							natural reservoir
+							<br> - a first analysis of this approach (SM2RAIN) shows promising results
+						</ul></font></p>
+					</ul></font>
 				</section>
 
 				<section>
-					<h3>Rainfall estimation:</h3>
-					<p>... from ASCAT surface soil moisture retrieval based on SM2RAIN:</p>
-					<img data-src="./lecture_material/L8_apps/rainfall_estimate.png" style="width:45%;height:auto;" >
+					<h3>Rainfall estimation</h3>
+					<font size="6"><p>... from ASCAT surface soil moisture retrieval based on SM2RAIN:</p></font>
+					<img src="./lecture_material/L8_apps/rainfall_estimate.png" style="width:45%;height:auto;" >
 				</section>
 		</div>
 

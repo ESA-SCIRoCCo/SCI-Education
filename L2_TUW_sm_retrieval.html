@@ -47,11 +47,11 @@
 					<div class="div_center">
 					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
 					<br>
-					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
+					<img src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
 					<br>
 					<small>Funded by:</small>
-					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
-					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+					<img src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
+					<img src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
 					</div>		
 				</section>
 				
@@ -62,29 +62,31 @@
 				
 				<section>
 					<h3>Introduction</h3>
-						<p>The <b>state of a geophysical parameter</b> can be retrieved by converting information that is contained...</p>
-						<li class="fragment fade-in"><font size="6">in the observed radiation emitted by an object on the Earth’s surface (passive case) or </font></li>
-						<li class="fragment fade-in"><font size="6">in observed reflected radiation (active case)</font></li>
-						<br>
-						<p class="fragment fade-in">&rArr; i.e., in the observed backscatter $\sigma^0$
+						<p>The <b>state of a geophysical parameter</b> can be retrieved by converting information that is contained...
+						<font size="6"><ul>
+							<li class="fragment fade-in">in the observed radiation emitted by an object on the Earth’s surface (passive case) or
+							<li class="fragment fade-in">in observed reflected radiation (active case)
+						</ul></font></p>
+					<img class="fragment fade-in" src="./lecture_material/TUW_sm_retrieval/act_pass.jpg" style="width:auto;height:auto;" >	
 				</section>				
 				
 				<section>
 					<h3>Forward / Inverse Model</h3>
-					<img data-src="./lecture_material/TUW_sm_retrieval/forward_inverse_problem.JPG" style="width:500px;height:auto;" >
-					<p>Geophysical Parameter: e.g. soil moisture
-					<br>Observable Quantity: radiance measured by the antenna
-					<br><br>The TU Wien method represents an inverse model.</p>
+					<img src="./lecture_material/TUW_sm_retrieval/forward_inverse_problem.JPG" style="width:60%;height:auto;" >
+					<font size="6"><p>Geophysical Parameter: e.g. soil moisture
+					<br>Observable Quantity: radiance measured by the antenna</p>
+					<p style="color:#0098DB;">The TU Wien method represents an inverse model.</p></font>
                 </section>
 				
 				<section>
 					<h3>Forward Model</h3>
-					<p>Processes involved in the <b>propagation of the radiation</b> from the Earth’s surface to the antenna:
-					<br><font size="6">interactions of the waves with illuminated matter such as <b>soil, vegetation canopy</b> or <b>atmospheric particles</b></font></p>
+					<p class="fragment fade-in">Models what we would observe (measure) under certain geophysical conditions</p>
+					<font size="6"><p class="fragment fade-in">Processes involved in the <b>propagation of the radiation</b> from the Earth’s surface to the antenna:
+					<br>interactions of the waves with illuminated matter such as <b>soil, vegetation canopy</b> or <b>atmospheric particles</b></p></font>
 					<div class="div_center">
-					<p>$$Y = f(x, \Omega)$$</p>
+					<p class="fragment fade-in">$$Y = f(x, \Omega)$$</p>
 					</div>
-					<p><i><font size="4">
+					<p class="fragment fade-in"><i><font size="4">
 					$Y$...observable quantities (i.e., radiance measured by the antenna)<br>
 					$x$...geophysical parameters of interest (e.g., temperature or soil moisture)<br>
 					$\Omega$...set of controllable measurement conditions (e.g., the wavelengths, viewing direction, time, sun position, polarization, ...)<br>
@@ -95,11 +97,13 @@
 
 				<section>
 					<h3>Inverse Model</h3>
-					<p>Inversion of the forward model &rArr; retrieval of the parameters of interest from the observables</p>
+					<p class="fragment fade-in">Inversion of the forward model &rArr; retrieval of the parameters of interest from the observables.
+					<font size="6"><p class="fragment fade-in">We observe certain parameter values (e.g. backscatter) - what are the geophysical conditions that we are actually
+					interested in (e.g. soil moisture)?</p></font>
 					<div class="div_center">
-					<p>$$\hat{x} = g(\hat{Y}, \hat{\Omega})$$</p>
+					<p class="fragment fade-in">$$\hat{x} = g(\hat{Y}, \hat{\Omega})$$</p>
 					</div>
-					<p><i><font size="4">
+					<p class="fragment fade-in"><i><font size="4">
 					$\hat{x}$ ...estimates of the geophysical parameters obtained by g(.)<br>
 					$g(.)$ ...complex function<br>
 					$\hat{Y}$ ...actual measurements<br>
@@ -115,93 +119,97 @@
 				<section>
 					<h3>The TU-Wien soil moisture model</h3>
 					<h4>Introduction I</h4>
-					<font size="6">
-					<li class="fragment fade-in">developed at the Vienna University of Technology</li>
-					<li class="fragment fade-in">physically motivated empirical change detection method</li>
-					<li class="fragment fade-in">no iterative adjustment process needed - direct retrieval from backscatter measurements possible</li>
-					<li class="fragment fade-in">model parameters calibration requires a multi-year radar backscatter archive &rArr; land cover, surface roughness...</li>
-					</font>
+					<font size="6"><ul>
+						<li class="fragment fade-in"><p>developed at the Vienna University of Technology</p>
+						<li class="fragment fade-in"><p>physically motivated empirical change detection method</p>
+						<li class="fragment fade-in"><p>no iterative adjustment process needed - direct retrieval from backscatter measurements possible</p>
+						<li class="fragment fade-in"><p>model parameters calibration requires a multi-year radar backscatter archive &rArr; land cover, surface roughness...</p>
+					</ul></font>
 				</section>
 				
 				<section>
 					<h3>The TU-Wien soil moisture model</h3>
 					<h4>Introduction II</h4>
-					<font size="6">
-					<ul>
-					<li class="fragment fade-in">European C-Band Scatterometers ESCAT and ASCAT data (multi-incidence angle and multi-beam viewing capability)</li>
-					<li class="fragment fade-in">Variations of the backscatter coefficient $\sigma^0$ are related to...
-						<ul>
-						<li class="fragment fade-in" type="circle"><font size="6">surface roughness</font></li>
-						<li class="fragment fade-in" type="circle"><font size="6">changes in vegetation</font></li>
-						<li class="fragment fade-in" type="circle"><font size="6">variations in the soil water content</font></li>
-						</ul></li> 
-					</ul>
-					</font>
+					<div class="div_twothirds">
+						<font size="6"><ul>
+							<li class="fragment fade-in"><p>Variations of the backscatter coefficient $\sigma^0$ are related to...
+							<font size="6"><ul>
+								<li class="fragment fade-in">surface roughness
+								<li class="fragment fade-in">changes in vegetation
+								<li class="fragment fade-in">variations in the soil water content
+							</ul></font></p>
+							<li class="fragment fade-in"><p>Datatsets: European C-Band Scatterometers ESCAT and ASCAT (multi-incidence angle and 
+							multi-beam viewing capability)</p>
+						</ul></font>
+					</div>
+					<div class="div_third">
+						<img class="fragment fade-in" src="./lecture_material/TUW_sm_retrieval/ESCAT_geometry.jpg" style="width:auto;height:auto;" >
+					</div>
 				</section>
 				
 				<section>
-					<h3>TU-Wien soil moisture model</h3>
-					<h4>Physical assumptions and empirically observed evidences I</h4>
-					<font size="6">
-					<ul>
-					<li class="fragment fade-in">Incidence angle $\theta$: strong impact on the backscatter coefficient $\sigma^0$
-						<ul>
-						<li class="fragment fade-in" align="center" type="circle"><font size="5">characteristic for roughness and vegetation</font>
-						<li class="fragment fade-in" type="circle"><font size="5">soil moisture changes are not/only minimally affected</font>
-						</ul>
-					<li class="fragment fade-in">coarse resolution of the scatterometer &rArr; roughness and land cover are temporally invariant
-					</ul>
-					</font>
+					<h3>Physical assumptions and empirically observed evidences I</h3>
+					<font size="5"><ul>
+						<p><li class="fragment fade-in">Incidence angle $\theta$: strong impact on the backscatter coefficient $\sigma^0$
+							<font size="5"><ul>
+								<li class="fragment fade-in" align="center">characteristic for roughness and vegetation
+								<li class="fragment fade-in">soil moisture changes are not/only minimally affected
+							</ul></font></p>
+						<p><li class="fragment fade-in">Coarse resolution of the scatterometer (~ tenths of kilometres, see ASCAT Dataviewer screenshot showing
+						Austria and surrounding area) 
+						<br><font size="5">&rArr; roughness and land cover can be assumed temporally invariant</font></p>
+					</ul></font>
+					<img class="fragment fade-in" src="./lecture_material/TUW_sm_retrieval/ascat_dataviewer.png" style="width:50%;height:auto;" >
 				</section>
 				
 				<section>
-					<h3>TU-Wien soil moisture model</h3>
-					<h4>Physical assumptions and empirically observed evidences II</h4>
-					<font size="6">
-					<li class="fragment fade-in">$\sigma^0$ decreases/increases with vegetation change (more vegetation &rArr; higher $\sigma^0$)
-						<p class="fragment fade-in"><font size="5">&rArr; the $\sigma^0$ time series changes in accordance to the vegetation phenology over time</font></p></li>
-					<li class="fragment fade-in">Vegetation phenology cycle: seasonal scale
-						<p class="fragment fade-in"><font size="5">&rArr; local short-term variability is negligible due to low resolution of the sensor</font></p></li>
-					<li class="fragment fade-in">The relationship between soil moisture and $\sigma^0$ - expressed in [dB] - is linear</li></font>
+					<h3>Physical assumptions and empirically observed evidences II</h3>
+					<font size="6"><ul>
+						<p><li class="fragment fade-in">$\sigma^0$ decreases/increases with vegetation change (more vegetation &rArr; higher $\sigma^0$)
+						<font size="5"><br>&rArr; the $\sigma^0$ time series changes in accordance to the vegetation phenology over time</font></p>
+						<p><li class="fragment fade-in">Vegetation phenology cycle: seasonal scale
+						<font size="5"><br>&rArr; local short-term variability is negligible due to low resolution of the sensor</font></p>
+						<p><li class="fragment fade-in">The relationship between soil moisture and $\sigma^0$ - expressed in [dB] - is linear</p>
+					</ul></font>
 				</section>
 				
 				<section>
-					<h3>TU-Wien soil moisture model</h3>
-					<h4>Physical assumptions and empirically observed evidences III</h4>
+					<h3>Physical assumptions and empirically observed evidences III</h3>
 					<div class="div_left"<font size="5">
 					<ul>
-					<li>incidence angle at which $\sigma^0$ is rather stable in face of vegetation changes: "crossover angles"
+						<li>Incidence angle at which $\sigma^0$ is rather stable in face of vegetation changes: "crossover angles"
 						<ul>
-						<li type="circle"><font size="5">$\theta_{dry}$: 25°</font>
-						<li type="circle"><font size="5">$\theta_{wet}$: 40°</font>
+							<li><font size="5">$\theta_{dry}$: ~ 25°</font>
+							<li><font size="5">$\theta_{wet}$: ~ 40°</font>
 						</ul>
 					</ul>
 					</font></div>
 					<div class="div_right">
-						<img data-src="./lecture_material/TUW_sm_retrieval/crossover_angles.JPG" style="width:450px;height:auto;" >
+						<img src="./lecture_material/TUW_sm_retrieval/crossover_angles.JPG" style="width:450px;height:auto;" >
 					</div>
 				</section>
 				
 				<section>
-					<h3>TU-Wien soil moisture model</h3>
-					<h4>processing steps</h4>
-					<div class="div_right">
-						<img data-src="./lecture_material/TUW_sm_retrieval/angles.JPG" style="width:auto;height:auto;" >
-					</div>
+					<h3>processing steps</h3>
 					<div class="div_left">
-					<ul>
-					<li class="fragment fade-in"> Normalisation of ESCAT backscatter measurements
 						<ul>
-						<li class="fragment fade-in" type="circle"><font size="6">Azimuth angle normalisation</font>
-						<li class="fragment fade-in" type="circle"><font size="6">Incidence angle normalisation</font>
+							<p><li data-fragment-index="1" class="fragment fade-in"> Normalisation of ESCAT backscatter measurements
+							<font size="6"><ul>
+								<li data-fragment-index="2" class="fragment fade-in">Azimuth angle normalisation
+								<li data-fragment-index="3" class="fragment fade-in">Incidence angle normalisation
+							</ul></font></p>
+							<li data-fragment-index="5" class="fragment fade-in"><p>Vegetation correction</p>
+							<li data-fragment-index="6" class="fragment fade-in"><p>Soil moisture estimation</p>
+							<li data-fragment-index="7" class="fragment fade-in"><p>Soil moisture uncertainty estimation</p>
 						</ul>
-					<li class="fragment fade-in">Vegetation correction
-					<li class="fragment fade-in">Soil moisture estimation
-					<li class="fragment fade-in">Soil moisture uncertainty estimation</div>
-					</ul>
-					<div class="div_center">
-					<p class="fragment fade-in" style="color:#006622;">...each of these steps is described in a respective lecture!</p>
 					</div>
+					
+					<div class="div_right">
+						<img data-fragment-index="4" class="fragment fade-in" src="./lecture_material/TUW_sm_retrieval/angles.JPG" style="width:150%;height:auto;" >
+						<p data-fragment-index="8" class="fragment fade-in" style="color:#0098DB;">
+						...each of these steps is described in a respective lecture!
+						</p>
+					</div>				
 				</section>
 				
 		</div>

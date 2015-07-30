@@ -57,19 +57,25 @@
 				
 				<section>
 					<h3>Backscatter from natural land surfaces</h3>
-					<ul><li>"Scattering": the random distortion of coherent electromagnetic (EM) waves by surface and structures similar to/larger in size 							than the radar wavelength
-					<br><br><li>any interface separating two media with different dielectric properties affects an incident EM wave
-					<br><br><li>perfectly flat interface &rArr; resulting field: two plane waves (refracted and reflected wave)</ul>
+					<ul>
+						<li><p>"Scattering": the random distortion of coherent electromagnetic (EM) waves by surface and structures similar 
+						to/larger in size than the radar wavelength</p>
+						<li><p>any interface separating two media with different dielectric properties affects an incident EM wave</p>
+						<li><p>perfectly flat interface &rArr; resulting field: two plane waves (refracted and reflected wave)</p>
+					</ul>
 				</section>
 
 				<section>
 					<h3>Fresnel's law</h3>
 					<div class="div_left">
-					<ul><li>upper medium: reflected wave, same angle $\theta$ as incident angle
-					<li>lower medium: refracted wave, angle $\theta'$
-					<li>Fresnel's law:<br>
-					$\theta'\;=\;\arcsin{\frac{\sqrt{\varepsilon_2}\sin{\theta}}{\sqrt{\varepsilon_1}}}$
-					<small><br>$\varepsilon_{1,\;2}$...dielectric constant of medium 1, 2</small></ul></div>
+					<ul>
+						<li><p>upper medium: reflected wave, same angle $\theta$ as incident angle</p>
+						<li><p>lower medium: refracted wave, angle $\theta'$</p>
+						<li><p>Fresnel's law:<br>
+						$\theta'\;=\;\arcsin{\frac{\sqrt{\varepsilon_2}\sin{\theta}}{\sqrt{\varepsilon_1}}}$
+						<small><br>$\varepsilon_{1,\;2}$...dielectric constant of medium 1, 2</small></p>
+					</ul>
+					</div>
 					<div class="div_right">
 						<img src="./lecture_material/inc_norm/scattering_mechanisms_a.JPG" style="width:auto;height:auto;" >
 					</div>
@@ -79,39 +85,12 @@
 					<h3>Surface Scattering I</h3>
 					<ul><li><p>occurs if lower medium is uniform and homogenous</p>
 					<li><p>scattering only occurs at the surface interface between the upper and the lower medium</p>
-					<li><p>dependent on two roughness parameters:
+					<li><p>dependent on two surface roughness parameters:
 					<ul><li>standard deviation of the surface height variations $s$
 					<li>surface correlation length $l$</p></ul>
-					<li><p>Fraunhofer criterion: smooth if $s\;\lt\;\frac{\lambda}{128\cos(\theta_0)}$</p></ul>
+					<li><p>Fraunhofer criterion: a surface is considered smooth if $s\;\lt\;\frac{\lambda}{128\cos(\theta_0)}$</p></ul>
 				</section>
 				
-				<section>
-					<h3>Surface roughness</h3>
-					<div class="div_left"><p>Whether a surface appears to be smooth or rough depends on the wavelength of the incident wave.
-					<br><br>Rayleigh-criterion: a surface is classified as rough, if the root mean square height <br>$h$ &gt; $\frac{\lambda}{8}*\cos{\theta}$
-					<br><small>$\lambda$...wavelength, $\theta$...incidence angle</small></p></div>
-					<div class="div_right">
-						<img src="./lecture_material/inc_norm/incidence_roughness_backscatter.jpg" style="width:auto;height:auto;" >
-					</div>
-				</section>
-
-				<section>
-				<h3>ACF and correlation length</h3>
-				<ul><p><li>normalised autocorrelation function (ACF) $\rho(x)$
-					<ul><li type="circle">measure of the similarity between the heights at two points</ul>
-				<li>surface correlation length $l$: the displacement $x'$ for which $\rho(x)$ is equal to $\frac{1}{e}$ (see next slide)
-					<ul><li type="circle">$l$ is a measure for the statistical independence of two points: if they are separated by a horizontal distance greater than $l$,
-					their heights may be considered to be approximately stastistically independent</ul>
-				<li>perfectly smooth (specular) surface: $l\;=\;\infty$</p></ul>
-				</section>
-
-				<section>
-					<h3>Surface profile and corresponding ACF</h3>
-					<div class="div_center">
-					<img src="./lecture_material/inc_norm/surface_AC.png" style="width:60%;height:auto;" >
-					</div>
-				</section>
-
 				<section>
 					<h3>Surface Scattering II</h3>
 					<div class="div_left">
@@ -128,6 +107,41 @@
 							<p>Interesting for us: radiation in sensor direction (= backscatter)</p>
 							<p style="color:#0098DB;">A larger incidence angle automatically means more specular reflection, and the other way round!</p>
 						</font>
+					</div>
+				</section>
+
+				<section>
+				<h3>Relationship Incidence Angle - Roughness - Backscatter</h3>
+				<img src="./lecture_material/inc_norm/incidence_roughness_backscatter.jpg" style="width:auto;height:auto;" >
+				</section>
+
+				<section>
+					<h3>Surface roughness</h3>
+					<p>Whether a surface appears to be smooth or rough depends on the wavelength of the incident wave.
+					<br><br>Rayleigh-criterion: a surface is classified as rough, if the root mean square height $h$ &gt; $\frac{\lambda}{8}*\cos{\theta}$
+					<br><small>$\lambda$...wavelength, $\theta$...incidence angle</small></p>
+				</section>
+				
+				<section>
+				<h3>ACF and correlation length</h3>
+				<ul>
+					<li><p>normalised autocorrelation function (ACF) $\rho(x)$
+					<ul>
+						<li>measure of the similarity between the heights at two points
+					</ul></p>
+					<li><p>surface correlation length $l$: the displacement $x'$ for which $\rho(x)$ is equal to $\frac{1}{e}$ (see next slide)
+					<ul>
+						<li>$l$ is a measure for the statistical independence of two points: if they are separated by a horizontal distance greater than $l$,
+						their heights may be considered to be approximately stastistically independent
+					</ul></p>
+					<li><p>perfectly smooth (specular) surface: $l\;=\;\infty$</p>
+				</ul>
+				</section>
+
+				<section>
+					<h3>Surface profile & corresponding ACF</h3>
+					<div class="div_center">
+					<img src="./lecture_material/inc_norm/surface_AC.png" style="width:60%;height:auto;" >
 					</div>
 				</section>
 
@@ -161,24 +175,33 @@
 					<br><br><br><p>The figure shows the backscatter $\sigma^0$ as a function of the incidence angle for three different biomes.</p></div>
 					<div class="div_right">					
 					<img src="./lecture_material/inc_norm/backscatter_incangle.png" style="width:auto;height:auto;" >
-					<font size="2"><br>[from Scipal (2002)]</font>
 					<p>The slope of the curves is indicative for the scattering mechanism taking place at the observed target.</p></div>
 				</section>
 
 				<section>
 					<h3>Backscatter incidence angle behaviour</h3>
 					<p>The backscatter incidence angle behaviour can be sufficiently modelled using a second order polynomial:</p>
-					<font size="5">$\sigma^0(\theta,\;t)\;=\;\sigma^0(40°,\;t)\;+\;\sigma'(40°,\;t)(\theta\;-\;40°)\;+\;\frac{1}{2}\sigma''(40°,\;t)(\theta\;-\;40°)^2$</font>
-					<font size="5"><p><ul><li type="circle">slope $\sigma'(40°,\;t)$ - first derivative of $\sigma^0(\theta)$
-					<li type="circle">curvature $\sigma''(40°,\;t)$ - second derivative of $\sigma^0(\theta)$
-					<li type="circle">both parameters are a function of time $t$ and incidence angle $40°$</ul></p></font>
+					<br>
+
+					\begin{equation}
+					\begin{split}
+						\sigma^0(\theta,\;t)\;=\;&\sigma^0(40°,\;t)\;+\;\sigma'(40°,\;t)(\theta\;-\;40°)\;\\
+						&+\;\frac{1}{2}\sigma''(40°,\;t)(\theta\;-\;40°)^2
+					\end{split}
+					\end{equation}
+					
+					<font size="5"><p><ul><li>slope $\sigma'(40°,\;t)$ - first derivative of $\sigma^0(\theta)$
+					<li>curvature $\sigma''(40°,\;t)$ - second derivative of $\sigma^0(\theta)$
+					<li>both parameters are a function of time $t$ and incidence angle $40°$</ul></p></font>
 				</section>
 
 				<section>
 					<h3>Soil moisture change</h3>
-					<div class="div_left"><p>Assumption: slope $\sigma'(40°,\;t)$ and curvature $\sigma''(40°,\;t)$ are unaffected by soil moisture variations</p>
+					<div class="div_left">
+					<font size="6"><p>Assumption: slope $\sigma'(40°,\;t)$ and curvature $\sigma''(40°,\;t)$ are unaffected by soil moisture variations</p>
 					<p>&rArr; changes in soil moisture are only reflected in the magnitude of the backscatter coefficient $\sigma^0(40°,\;t)$!
-					</p></div>
+					</p></font>
+					</div>
 					<div class="div_right">
 					<img src="./lecture_material/inc_norm/sm_change.png" style="width:auto;height:auto;" >
 					</div>
@@ -195,10 +218,12 @@
 
 				<section>
 					<h3>slope and curvature  estimation I</h3>
-					<div class="div_left"><ul><li>ESCAT: 3 beams (fore-, mid-, aft-beam)
-					<li>estimation of the local slope $\sigma'_L$
-					<li>each backscatter triplet yields two local slope estimates:</ul>
-					<font size="6">$\sigma'_L(\frac{\theta_m\;+\;\theta_{f,a}}{2})\;=\;\frac{\sigma^0_m(\theta_m)\;-\;\sigma^0_{f,a}(\theta_{f,a})}{\theta_m\;-\;\theta_{f,a}}$
+					<div class="div_left"><ul>
+						<li><p>ESCAT: 3 beams (fore-, mid-, aft-beam)</p>
+						<li><p>estimation of the local slope $\sigma'_L$</p>
+						<li><p>each backscatter triplet yields two local slope estimates:</p>
+					</ul>
+					<font size="5">$$\sigma'_L(\frac{\theta_m\;+\;\theta_{f,a}}{2})\;=\;\frac{\sigma^0_m(\theta_m)\;-\;\sigma^0_{f,a}(\theta_{f,a})}{\theta_m\;-\;\theta_{f,a}}$$
 					</font></div>
 					<div class="div_right">
 					<img src="./lecture_material/inc_norm/local_slope.png" style="width:auto;height:auto;" >
@@ -207,10 +232,21 @@
 				<section>
 					<h3>slope and curvature  estimation II</h3>
 					<div class="div_left">
-					<ul><li><p><b>regression line</b> fitted to the computed local slopes $\sigma'_L$ aquired during a 
-					particular period:</p>
-					<font size="4.5">$$\sigma'(\theta,t)\;=\;\sigma'(40°,t)\;+\;\sigma''(40°,t)(\theta\;-\;40°)$$</font>
-					<li><p>slope and curvature can be obtained from the regression line</p></ul>
+					<ul>
+						<li><p><b>regression line</b> fitted to the computed local slopes $\sigma'_L$ aquired during a 
+						particular period:</p>
+					</ul>
+						<font size="5">
+						\begin{equation}
+						\begin{split}						
+						\sigma'(\theta,t)\;=&\;\sigma'(40°,t)\;\\
+						&+\;\sigma''(40°,t)(\theta\;-\;40°)
+						\end{split}
+						\end{equation}
+						</font>
+					<ul>
+						<li><p>slope and curvature can be obtained from the regression line</p>
+					</ul>
 					</div>
 					<div class="div_right">
 					<img src="./lecture_material/inc_norm/regr_line.png" style="width:auto;height:auto;" >
@@ -227,7 +263,8 @@
 				<section>
 					<h3>Global monthly slope</h3>
 					<div class="div_center">
-					<img src="./lecture_material/inc_norm/global_monthly_slope.gif" style="width:auto;height:auto;" >
+					<img src="./lecture_material/inc_norm/global_monthly_slope.gif" style="width:90%;height:auto;" >
+					<font size="6"><p>Compare the slope variability in rainforest areas to that in temperate zones (e.g. Europe or North America)!</p></font> 
 					</div>
 				</section>
 
@@ -237,10 +274,19 @@
 					$\sigma''(40°,t)$ values.
 					<br>Finally, the following equation is used to derive backscatter coefficients normalised to 40° incidence angle 
 					$\sigma^0(40°,t)$:</p>
-					<font size="5.5">$\sigma_i^0(40°,t)\;=\;\sigma_i^0(\theta,t)\;-\;\sigma'(40°,t)(\theta\;-\;40°)\;-\;\frac{1}{2}\sigma''(40°,t)(\theta\;-\;40°)^2$
+					<div class="div_center">
+					<font size="6">
+					<br>
+					\begin{equation}
+					\begin{split}
+					\sigma_i^0(40°,t) =\; & \sigma_i^0(\theta,t)\;-\;\sigma'(40°,t)(\theta\;-\;40°) \\
+					& -\;\frac{1}{2}\sigma''(40°,t)(\theta\;-\;40°)^2
+					\end{split}
+					\end{equation}
 					</font>
+					</div>
 				</section>
-					
+				
 		</div>
 
 		<script src="./reveal.js/lib/js/head.min.js"></script>

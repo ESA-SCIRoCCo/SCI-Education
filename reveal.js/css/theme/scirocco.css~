@@ -91,10 +91,10 @@ body {
   list-style-type: disc; }
 
 .reveal ul ul {
-  list-style-type: circle; }
+  list-style-type: square; }
 
 .reveal ul ul ul {
-  list-style-type: square; }
+  list-style-type: circle; }
 
 .reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
   display: block;
@@ -264,8 +264,7 @@ body {
 
  /*********************************************
  * CUSTOMISATION
-*********************************************/
-
+ *********************************************/
  .div_left{
     float: left;
     width:48%;
@@ -275,12 +274,12 @@ body {
     width:48%;
  }
  
- div.div_twothirds{
+ .div_twothirds{
 	float: left;
 	width: 68%;
 }
 
- div.div_third{
+ .div_third{
 	float: right;
 	width: 28%;
 }
@@ -293,7 +292,7 @@ body {
 	text-align: justify;
 }
 
-div.div_center {
+.div_center {
 	text-align: center;
 	width:100%;
 }

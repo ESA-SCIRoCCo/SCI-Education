@@ -47,25 +47,38 @@
 					<div class="div_center">
 					<small>Created by:</small>&nbsp;<small style="font-weight:bold;">Vienna University of Technology</small>
 					<br>
-					<img data-src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
+					<img src="./lecture_material/logos/GEO.png" style="width:250px;height:auto" >
 					<br>
 					<small>Funded by:</small>
-					<img data-src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
-					<img data-src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
+					<img src="./lecture_material/logos/ESA.png" style="width:250px;height:auto;float:left;" >
+					<img src="./lecture_material/logos/SCIRoCCo.png" style="width:250px;height:auto;float:right;" >
 					</div>		
 				</section>
 				
 				<section>
-					<h3>Recapitulation</h3>
-					<p>So far, you have read about...</p>
-					<ul><li class="fragment fade-in">Backscatter normalisation, more precisely:
-						<ul><li class="fragment fade-in" type="circle">Azimuth angle normalisation
-						<li class="fragment fade-in" type="circle">Incidence angle normalisation</ul>
-					<li  class="fragment fade-in">Vegetation correction</ul>
-					<br><p class="fragment fade-in">Coming next...</p>
-					<ul><li class="fragment fade-in">the actual soil moisture retrieval algorithm</ul>
-					</section>
-
+				<h3>Recapitulation</h3>
+				<div class="div_twothirds">
+				<font size="6"><p>So far, you have read about...</p>
+				<ul>
+					<li class="fragment fade-in">Backscatter normalisation, more precisely:
+					<ul>
+						<li class="fragment fade-in">Azimuth angle normalisation
+						<li class="fragment fade-in">Incidence angle normalisation
+					</ul>
+					<li class="fragment fade-in">Vegetation correction
+				</ul>
+				<br>
+				<p class="fragment fade-in">Coming next...</p>
+				<ul>
+					<li class="fragment fade-in">the actual soil moisture retrieval
+				</ul></font>
+				</div>
+				<div class="div_third">
+				<br>
+				<img src="./lecture_material/L6_sm_retrieval/grass.jpg" style="width:auto;height:auto;" >
+				</div>
+				</section>
+					
 				<section>
 					<h3>Important assumptions</h3>
 					<ul><li class="fragment fade-in"><p>the relationship between the observed backscatter coefficient in [dB] and the actual soil moisture
@@ -76,9 +89,9 @@
 
 				<section>
 					<h3>the soil moisture retrieval approach</h3>
-					<p>The retrieved soil moisture values from the TU-Wien model are commonly expressed as <b>degree of saturation of the soil 
-					surface layer</b>.</p>
-					<img data-src="./lecture_material/L6_sm_retrieval/sm_retr_approach.png" style="width:80%;height:auto;" >
+					<font size="6"><p>The retrieved soil moisture values from the TU-Wien model are commonly expressed as <b>degree of saturation of the soil 
+					surface layer</b>.</p></font>
+					<img src="./lecture_material/L6_sm_retrieval/sm_retr_approach.png" style="width:80%;height:auto;" >
 				</section>
 
 				<section>
@@ -87,7 +100,7 @@
 					lower/upper backscatter values</p>
 					<li class="fragment fade-in"><p>the dry reference $\sigma^0_{dry}$ has to be shifted back (extrapolated) to the 
 					reference incidence angle of 40 degrees by means of the corresponding slope and curvature functions</p>
-					<li class="fragment fade-in"><p>this is not necessary for the wet reference, since it is assumed to be 40° (i.e. equal to the wet 
+					<li class="fragment fade-in"><p>this is not necessary for the wet reference, since it is assumed to be 40° (i.e., equal to the wet 
 					crossover angle)</p>
 				</section>
 
@@ -95,20 +108,22 @@
 					<h3>Soil Moisture Retrieval</h3>
 					<div class="div_left"><p>Comparison of the observed normalised backscatter measurements $\sigma(40°,t)$ to the dry 
 					($\sigma^0_{dry}$) and wet ($\sigma^0_{wet}$) reference:</p>
+					<p class="fragment fade-in">
 					<br><font size="6">$sm(t)\;=\;\frac{\sigma^0(40,t)\;-\;\sigma^0_{dry}(40,t)}{\sigma^0_{dry}(40,t)\;-\;\sigma^0_{wet}(40,t)}$</font>
+					</p>
 					</div>
 					<div class="div_right">
-					<img data-src="./lecture_material/L6_sm_retrieval/pic1.png" style="width:400px;height:auto;" >
-					<p class="fragment fade-in" style="color:#58ACFA;">Now we've got a soil moisture value!</p></div>
+					<img src="./lecture_material/L6_sm_retrieval/pic1.png" style="width:400px;height:auto;" >
+					<p class="fragment fade-in" style="color:#0098DB;">Now we've got a soil moisture value!</p></div>
 				</section>
 
 				<section>
-					<h3>The individual steps of the TU-Wien surface soil moisture retrieval model</h3>
+					<h3>Individual steps of the TU-Wien model</h3>
 					<div class="div_twothirds">					
-					<img data-src="./lecture_material/L6_sm_retrieval/flowchart.png" style="width:600px;height:auto;" >
+					<img src="./lecture_material/L6_sm_retrieval/flowchart.png" style="width:auto;height:auto;" >
 					</div>
 					<div class="div_third">
-					<p><small><br><br><br><br><br><br><br><br><br><br><br><br>
+					<p><small><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 					<br>L1b...Level 1b
 					<br>DGG...discrete global grid</small></p>
 					</div>
@@ -116,7 +131,7 @@
 
 				<section>
 					<h3>SCAT seasonal soil moisture dynamics</h3>
-					<img data-src="./lecture_material/L6_sm_retrieval/mean_sm_change.gif" style="width:auto;height:auto;" >
+					<img src="./lecture_material/L6_sm_retrieval/mean_sm_change.gif" style="width:auto;height:auto;" >
 				</section>
 
 				<section>
@@ -138,12 +153,12 @@
 
 				<section>
 					<h3>Low Signal-to-Noise Ratio</h3>
-					<img data-src="./lecture_material/L6_sm_retrieval/SNR.png" style="width:auto;height:auto;" >
+					<img src="./lecture_material/L6_sm_retrieval/SNR.png" style="width:auto;height:auto;" >
 				</section>
 
 				<section>
 					<h3>Resume of the Retrieval I</h3>
-					<font size="6"><ul><li><p>Soil moisture retrieval methode is a data-based approach</p>
+					<font size="6"><ul><li><p>The soil moisture retrieval method is a data-based approach:</p>
 						<ul><p><li>Starts from the observations, not from theoretical model considerations
 							<ul><li>Nevertheless, the TU Wien method has a solid physical foundation</ul></p>
 						<p><li>Exploits multiple viewing capabilities

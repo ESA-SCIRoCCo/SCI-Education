@@ -15,11 +15,27 @@ Soil-phase-diagram.svg
 The_water_cycle.jpg: xxxx (ESA?)
 Water_cycle_land_and_atmosphere.jpg: xxxx
 wet_soil_illustration.png
+tdr1: http://soilweb.landfood.ubc.ca/labmodules/images/stories/water/tdr1.jpg
+grav.jpg: http://www.kgs.ku.edu/Hydro/Publications/2007/OFR07_14/
+weigh_soil.jpg: https://nemablog.files.wordpress.com/2010/01/dscf1515.jpg
+radiolog.jpg: http://www.soilcropandmore.info/crops/sorghum/np05.jpg
+act_pass.jpg: http://www.fis.uni-bonn.de/sites/default/files/rte/Illu7r.jpg
+bat.jpg: http://askabiologist.asu.edu/sites/default/files/echolocation.jpg
+passive.gif: http://www.nrcan.gc.ca/earth-sciences/geomatics/satellite-imagery-air-photos/satellite-imagery-products/educational-resources/9371
+gcom_amsr2.jpg: http://www.jaxa.jp/projects/sat/gcom_w/images/gcom_w_main_001.jpg
+trend_1988_2010.png: ECV Soil Moisture - Seminar ETH Zürich.pptx
+active.png: ECV Soil Moisture - Seminar ETH Zürich.pptx
+side_looking_real.jpg: http://forsys.cfr.washington.edu/JFSP06/images/sar.jpg
+amsre_scan_geometry: http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1196037
+conical.gif: http://nsidc.org/data/docs/daac/scatterometer_instrument/quikscat_swath.gif
+sidelooking.gif: http://www.fao.org/docrep/003/t0355e/T0355E17.gif
+EM_spectrum.png: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/2000px-EM_Spectrum_Properties_edit.svg.png
 
 TU Wien soil moisture retrieval:
 forward_inverse_problem.JPG: PPP 2 Soil Moisture Retrieval #13
 crossover_angles.JPG: SCIRoCCo Handbook p22
 angles.JPG: PPP 1 MRS #23
+act_pass: http://www.fis.uni-bonn.de/sites/default/files/rte/Illu7r.jpg
 
 azimuth normalization:
 ESCAT_ASCAT_geometry.JPG: PPP 1 MRS #64
@@ -39,7 +55,7 @@ veg_change: Handbook
 autocorrelation: PPP2 SM retrieval
 inc angle vs radr backscatter curve: PPP2 SM retrieval
 slope&curvature plots (#15, 16): handbook
-global monthly slope gif #17: PPP2 SM retrieval
+global monthly slope gif #18: PPP2 SM retrieval
 
 
 vegetation correction:
